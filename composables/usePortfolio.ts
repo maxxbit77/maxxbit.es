@@ -47,6 +47,36 @@ export const usePortfolioInfo = () => {
 	}
 	const experience = [
 		{
+			projectName: 'Tickets seller',
+			companyName: 'Beon WorldWide',
+			startAt: '2024',
+			endsAt: '2024',
+			position: 'Front end Developer',
+			description:
+				'The ticketing application is an internal web-based platform designed for selling tickets for corporate events. It allows users to purchase tickets and select their seats using SVG map manipulation for enhanced interactivity. The application aims to simplify event management by providing a clear visualization of available seating options.',
+			url: '',
+			tags: [
+				"JavaScript",
+				"TypeScript",
+				"Vue.js 3",
+				"Nuxt.js 3",
+				"Tailwind CSS",
+				"Jest",
+				"Cypress",
+				"Node.js",
+				"Docker",
+				"Git",
+				"SourceTree",
+				"SCRUM",
+				"SVG Manipulation",
+				'REST API',
+			],
+			image: {
+				url: '/images/experience/mockup-sq.jpg',
+				alt: 'mockup Tickets seller',
+			},
+		},
+		{
 			projectName: 'Squinbox',
 			companyName: 'Mosaiqo S.L.',
 			startAt: '2023',
