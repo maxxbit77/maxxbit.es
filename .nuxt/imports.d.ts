@@ -26,5 +26,5 @@ export { injectHead, useHead, useSeoMeta, useHeadSafe, useServerHead, useServerS
 export { useMobileMenuState, useMobileMenu } from '../composables/UseMobileMenu';
 export { usePortfolioInfo } from '../composables/usePortfolio';
 export { useImage } from '../node_modules/.pnpm/@nuxt+image@1.3.0/node_modules/@nuxt/image/dist/runtime/composables';
-export { useNuxtDevTools } from '../node_modules/.pnpm/@nuxt+devtools@1.0.8_nuxt@3.9.3_vite@5.0.12/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
-export { definePageMeta } from '../node_modules/.pnpm/nuxt@3.9.3_eslint@8.56.0_vite@5.0.12/node_modules/nuxt/dist/pages/runtime/composables';
+export { useNuxtDevTools } from '../node_modules/.pnpm/@nuxt+devtools@1.7.0_vite@6.0.7_vue@3.4.14/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
+export { definePageMeta } from '../node_modules/.pnpm/nuxt@3.9.3_eslint@8.7.0_typescript@5.7.3_vite@6.0.7/node_modules/nuxt/dist/pages/runtime/composables';
