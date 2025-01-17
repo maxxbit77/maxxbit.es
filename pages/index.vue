@@ -1,6 +1,6 @@
 <script setup>
 useSeoMeta({
-  title: 'Maxxbit.tech',
+  title: "Maxxbit's Porfolio",
   description: "Portfolio developed with Vue/Nuxt/Tailwind",
   ogTitle: 'Maxxbit.tech',
   ogDescription: "Portfolio developed with Vue/Nuxt/Tailwind",
