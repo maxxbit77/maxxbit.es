@@ -113,7 +113,6 @@ declare global {
   const useModel: typeof import('../../node_modules/.pnpm/vue@3.4.14_typescript@5.7.3/node_modules/vue')['useModel']
   const useNuxtApp: typeof import('../../node_modules/.pnpm/nuxt@3.9.3_eslint@8.7.0_typescript@5.7.3_vite@6.0.7/node_modules/nuxt/dist/app/nuxt')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/.pnpm/nuxt@3.9.3_eslint@8.7.0_typescript@5.7.3_vite@6.0.7/node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']
-  const useNuxtDevTools: typeof import('../../node_modules/.pnpm/@nuxt+devtools@1.7.0_vite@6.0.7_vue@3.4.14/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
   const usePortfolioInfo: typeof import('../../composables/usePortfolio')['usePortfolioInfo']
   const useRequestEvent: typeof import('../../node_modules/.pnpm/nuxt@3.9.3_eslint@8.7.0_typescript@5.7.3_vite@6.0.7/node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']
   const useRequestFetch: typeof import('../../node_modules/.pnpm/nuxt@3.9.3_eslint@8.7.0_typescript@5.7.3_vite@6.0.7/node_modules/nuxt/dist/app/composables/ssr')['useRequestFetch']
@@ -263,7 +262,6 @@ declare module 'vue' {
     readonly useModel: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.14_typescript@5.7.3/node_modules/vue')['useModel']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.9.3_eslint@8.7.0_typescript@5.7.3_vite@6.0.7/node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.9.3_eslint@8.7.0_typescript@5.7.3_vite@6.0.7/node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
-    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+devtools@1.7.0_vite@6.0.7_vue@3.4.14/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePortfolioInfo: UnwrapRef<typeof import('../../composables/usePortfolio')['usePortfolioInfo']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.9.3_eslint@8.7.0_typescript@5.7.3_vite@6.0.7/node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']>
     readonly useRequestFetch: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.9.3_eslint@8.7.0_typescript@5.7.3_vite@6.0.7/node_modules/nuxt/dist/app/composables/ssr')['useRequestFetch']>
