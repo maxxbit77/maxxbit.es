@@ -46,29 +46,28 @@ onMounted(() => {
 				</div>
 			</li>
 			<li>
-				<button
-					data-tooltip-target="pdf"
-					type="button"
-					class="hover:text-primary-300 transition-all duration-500 ease-in-out"
-					aria-label="Download CV"
-				>
-					<a href="/CV.pdf" download aria-label="Download CV">
-						<Icon name="mdi:cloud-download" class="h-8 w-8" />
-					</a>
-				</button>
-				<div
-					id="pdf"
-					role="tooltip"
-					class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-				>
+				<a href="/CV-maxiroig.front-end-dev.pdf" download aria-label="Download CV">
+					<!-- <button
+						data-tooltip-target="pdf"
+						type="button"
+						class="hover:text-primary-300 transition-all duration-500 ease-in-out border-1" 
+						aria-label="Download CV"
+					>
 					Download CV
-					<div class="tooltip-arrow" data-popper-arrow></div>
-				</div>
+						
+					</button> -->
+					<button class="border px-10 py-0.5 border-white rounded-lg bg-primary-300 transition-all hover:bg-slate-800 hover:text-primary-300 duration-500 ease-in-out text-black">
+						Download CV
+						<Icon name="mdi:cloud-download" class="size-6" />
+
+					</button>
+				</a>
+				
 			</li>
 		</ul>
 		<div class="mt-2">
 			<div
-				class="h-10 w-72 rounded-lg bg-slate-800 px-2 text-gray-400 flex border items-center justify-between"
+				class="h-8 w-72 rounded-lg bg-slate-800 px-2 text-gray-400 flex border items-center justify-between"
 			>
 				{{ contact.email }}
 				<div class="space-x-2 flex items-center">
@@ -84,12 +83,12 @@ onMounted(() => {
 								<Icon
 									v-if="!copied"
 									name="mdi:content-copy"
-									class="h-7 w-7"
+									class="size-6"
 								/>
 								<Icon
 									v-else
 									name="icon-park-outline:file-success"
-									class="h-7 w-7"
+									class="size-6"
 								/>
 							</div>
 						</button>
@@ -115,7 +114,7 @@ onMounted(() => {
 							>
 								<Icon
 									name="mdi:send"
-									class="h-7 w-7 text-gray-500 transition-all duration-500 ease-in-out hover:text-primary-300"
+									class="size-6 text-gray-500 transition-all duration-500 ease-in-out hover:text-primary-300"
 								/>
 							</a>
 						</button>
@@ -124,7 +123,7 @@ onMounted(() => {
 							role="tooltip"
 							class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
 						>
-							Send
+							Send Email
 							<div class="tooltip-arrow" data-popper-arrow></div>
 						</div>
 					</div>
