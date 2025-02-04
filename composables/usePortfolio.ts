@@ -169,14 +169,14 @@ export const usePortfolioInfo = () => {
 
 	const projects = [
 		{
-			projectName: 'WorldHaven',
+			projectName: 'FinancesFlow (In progress...)',
 			companyName: 'Training Project',
-			startAt: '2020',
-			endsAt: '2021',
+			startAt: '2024',
+			endsAt: '2025',
 			position: '',
 			description:
-				"The book's home is a portal where you can choose the books you like the most and add them to your favorites list to read them whenever you feel like it. This app has filters to make it easier to search for your favorite book.",
-			url: 'https://bitbucket.org/maxxbit77dev/wordheaven/src/main/',
+				'Building in progress a financial management application with Vue 3, TypeScript, Tailwind UI, and D3.js. The frontend is deployed on Vercel, while the backend (to be built with Firebase) will handle API integrations and data management.',
+			url: 'https://financesflow.maxxbit.es',
 			tags: [
 				'Javascript',
 				'API REST',
@@ -190,19 +190,19 @@ export const usePortfolioInfo = () => {
 				'Css3',
 				'Git',
 			],
-			image: { url: '/images/projects/mockup-wh.jpg', alt: 'mockup WorldHaven' },
+			image: { url: '/images/projects/mockup-finances-flow.png', alt: 'mockup FinancesFlow' },
 		},
 		{
-			projectName: 'Rick & Morty APP',
+			projectName: 'Vibency',
 			companyName: 'Training Project',
 			startAt: '2020',
 			endsAt: '2020',
 			description:
-				'Created a task manager application with features like task creation, editing, and deletion. Implemented using Vue.js for the frontend and connected to a simple backend for data management.',
+				'An app where users share their mood on a map using emotes. Post your feelings, explore global emotions in real-time, and connect through a shared emotional experience. 📍😊',
 			technologies: ['Vue.js', 'Vuex', 'REST API', 'SCSS'],
-			url: 'https://bitbucket.org/maxxbit77dev/rick-morty/src/main/',
+			url: 'https://gitlab.com/vibency/frontend',
 			tags: ['Javascript', 'Vue 3', 'Vue Router', 'Axios', 'Tailwind', 'cypress', 'Pinia', 'API REST', 'Git'],
-			image: { url: '/images/projects/mockup-rm.jpg', alt: 'mockup Rick&Morty' },
+			image: { url: '/images/projects/mockup-vibency.png', alt: 'mockup vibency' },
 		},
 	]
 	const studies = [

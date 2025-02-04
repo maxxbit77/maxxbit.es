@@ -1,18 +1,46 @@
 <script setup>
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { TransitionRoot } from '@headlessui/vue'
+
 const props = defineProps({
 	id: String,
 })
 
 const data = computed(() => usePortfolioInfo()?.[props.id] || null)
+
 const imageExpanded = ref(false)
 const activeIndex = ref(null)
+const openImage = ref(null) // Estado para abrir la imagen en modal
+
 const handleMouseOver = (index, project) => {
 	activeIndex.value = index
 }
 const handleMouseLeave = () => {
 	activeIndex.value = null
 }
+
+// Abrir imagen al hacer clic
+const openFullImage = (imageUrl) => {
+	openImage.value = imageUrl
+}
+
+// Cerrar imagen al hacer clic fuera o presionar ESC
+const closeFullImage = () => {
+	openImage.value = null
+}
+
+// Detectar la tecla ESC para cerrar la imagen
+const handleKeyDown = (event) => {
+	if (event.key === 'Escape') closeFullImage()
+}
+
+onMounted(() => {
+	window.addEventListener('keydown', handleKeyDown)
+})
+
+onUnmounted(() => {
+	window.removeEventListener('keydown', handleKeyDown)
+})
 </script>
 
 <template>
@@ -25,38 +53,25 @@ const handleMouseLeave = () => {
 				@mouseover="handleMouseOver(index, project)"
 				@mouseleave="handleMouseLeave"
 			>
-				<a :href="project.url">
-					<div>
-						<div
-							class="relative hidden md:block md:w-[480px] md:h-[380px] p-1"
-						>
-							<img
-								@mouseover="imageExpanded = true"
-								@mouseleave="imageExpanded = false"
-								loading="lazy"
-								:src="project?.image.url"
-								class="min-w-full rounded-lg"
-								:alt="project?.image.alt"
-							/>
-						</div>
+				<div>
+					<div class="relative hidden md:block md:w-[480px] md:h-[380px] p-1">
+						<img
+							@click="openFullImage(project?.image.url)"
+							loading="lazy"
+							:src="project?.image.url"
+							class="min-w-full rounded-lg cursor-pointer hover:scale-105 transition-transform"
+							:alt="project?.image.alt"
+						/>
 					</div>
-				</a>
+				</div>
 				<a :href="project.url">
 					<div class="grid grid-cols-4 gap-8 text-left">
 						<div class="px-4 col-span-1 text-secondary-300">
-							<p class="md:hidden lg:block">
-								{{ project.startAt }} - {{ project.endsAt }}
-							</p>
+							<p class="md:hidden lg:block">{{ project.startAt }} - {{ project.endsAt }}</p>
 						</div>
 						<div class="col-span-3">
 							<div class="overflow-wrap break-word">
-								<h3
-									class="text-white text-xl"
-									:class="{
-										'!text-primary-500':
-											activeIndex === index,
-									}"
-								>
+								<h3 class="text-white text-xl" :class="{ '!text-primary-500': activeIndex === index }">
 									{{ project.projectName }}
 									<Icon
 										name="material-symbols-light:arrow-outward"
@@ -68,15 +83,9 @@ const handleMouseLeave = () => {
 									/>
 								</h3>
 								<div class="text-white">
-									<h4 class="text-secondary-400">
-										{{ project.companyName }}
-									</h4>
-									<h4 class="text-secondary-400">
-										{{ project.position }}
-									</h4>
-									<p class="mt-5">
-										{{ project.description }}
-									</p>
+									<h4 class="text-secondary-400">{{ project.companyName }}</h4>
+									<h4 class="text-secondary-400">{{ project.position }}</h4>
+									<p class="mt-5">{{ project.description }}</p>
 								</div>
 							</div>
 							<Tags :tags="project?.tags" />
@@ -85,6 +94,16 @@ const handleMouseLeave = () => {
 				</a>
 			</li>
 		</ul>
+
+		<!-- Modal de imagen ampliada -->
+		<TransitionRoot appear :show="!!openImage" as="template">
+			<div
+				class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
+				@click="closeFullImage"
+			>
+				<img :src="openImage" class="max-w-full max-h-full rounded-lg shadow-lg" @click.stop />
+			</div>
+		</TransitionRoot>
 	</div>
 </template>
 
@@ -98,11 +117,9 @@ const handleMouseLeave = () => {
 	0% {
 		opacity: 0;
 	}
-
 	66% {
 		opacity: 0;
 	}
-
 	100% {
 		opacity: 1;
 	}
@@ -112,11 +129,9 @@ const handleMouseLeave = () => {
 	0% {
 		opacity: 0;
 	}
-
 	66% {
 		opacity: 0;
 	}
-
 	100% {
 		opacity: 1;
 	}
