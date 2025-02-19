@@ -3,7 +3,7 @@ const data = computed(() => usePortfolioInfo().projects)
 </script>
 
 <template>
-	<div>
+	<!-- <div>
 		<section class="">
 			<div class="uppercase text-2xl text-white">
 				Courses
@@ -19,5 +19,5 @@ const data = computed(() => usePortfolioInfo().projects)
 				</ul>
 			</div>
 		</section>
-	</div>
+	</div> -->
 </template>
