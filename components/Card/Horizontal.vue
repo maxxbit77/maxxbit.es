@@ -71,13 +71,13 @@ onUnmounted(() => {
 						</div>
 						<div class="col-span-3">
 							<div class="overflow-wrap break-word">
-								<h3 class="text-white text-xl" :class="{ '!text-primary-500': activeIndex === index }">
+								<h3 class="text-white text-xl" :class="{ '!text-matrix-500': activeIndex === index }">
 									{{ project.projectName }}
 									<Icon
 										name="material-symbols-light:arrow-outward"
 										class="h-5 w-5"
 										:class="{
-											'text-primary-500 translate-x-1 -translate-y-1 transition-all':
+											'text-matrix-500 translate-x-1 -translate-y-1 transition-all':
 												activeIndex === index,
 										}"
 									/>

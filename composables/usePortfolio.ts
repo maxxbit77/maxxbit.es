@@ -20,28 +20,28 @@ export const usePortfolioInfo = () => {
 		userLogo: '/brand/only-logo-nobg.png',
 	}
 	const myInfo = {
-		nickName: 'MaRoDev',
+		nickName: '@maxxbit',
 		name: 'Maxi Roig',
-		occupation: 'Front End developer',
-		slogan: 'I build dreams, engaging and accessible digital experiences.',
+		occupation: 'Front-end UI developer',
+		slogan: 'Focused in interactions and design',
 		image: '/profile.png',
 		socials: [
 			{
 				name: 'Linkedin',
 				url: 'https://www.linkedin.com/in/maxi-roig/',
-				icon: 'mdi:linkedin',
+				icon: 'ph:linkedin-logo-light',
 				id: '1',
 			},
 			{
 				name: 'Github',
 				url: 'https://github.com/maxxbit77',
-				icon: 'mdi:github',
+				icon: 'pixelarticons:github',
 				id: '2',
 			},
 		],
 		contact: {
 			text: 'Copy Email',
-			icon: 'ph:download-simple-thin',
+			icon: 'pixelarticons:cloud-download',
 			email: 'maxielcade04@gmail.com',
 		},
 	}

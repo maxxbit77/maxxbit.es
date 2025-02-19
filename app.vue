@@ -1,7 +1,6 @@
 <template>
-  <div class="bg-slate-900 h-vh">
-    <NavBar />
-    <NuxtPage />
-    <Footer />
-  </div>
+	<div class="bg-slate-950 h-vh">
+		<NuxtPage />
+		<Footer />
+	</div>
 </template>
