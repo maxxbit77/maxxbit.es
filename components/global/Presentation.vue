@@ -9,19 +9,22 @@ const { name, occupation, slogan, nickName, presentation } = myInfo
 			<h2 class="text-4xl font-matrix text-matrix uppercase">{{ name }}</h2>
 			<p class="text-gray-500 font-matrix pt-2">/ {{ nickName }}</p>
 		</div>
-		<h1 class="text-secondary-100 text-4xl uppercase font-matrix">
-			{{ occupation }}
-			{{ slogan }}
-		</h1>
+		<div>
+			<h1 class="text-secondary-100 text-4xl uppercase font-matrix">
+				{{ occupation }}
+			</h1>
+			<h2 class="text-secondary-100 text-2xl uppercase font-matrix">
+				{{ slogan }}
+			</h2>
+		</div>
 		<p class="text-secondary-400 text-4xl uppercase font-matrix"></p>
 		<p class="text-gray-400">
-			Building fast apps that feel like a physical extension of your mind with considerate motion design for fluid
-			interfaces.
+			I build fast, intuitive apps that feel like a natural extension of your mind, using thoughtful motion design
+			to create fluid, seamless interfaces.
 		</p>
 		<p class="text-gray-400">
-			I’m the person who can
-			<span class="text-white font-bold">bridge the gap between design and engineering</span>
-			to give your product that extra attention to detail to
+			<span class="text-white font-bold">I bridge the gap between design and engineering</span>
+			, ensuring your product gets the extra attention to detail it needs to
 			<span class="text-white font-bold">stand out from competitors. 🚀</span>
 		</p>
 	</div>

@@ -1,18 +1,55 @@
 <script setup>
-const { studies } = usePortfolioInfo()
+const props = defineProps({
+	projectName: String,
+	companyName: String,
+	startAt: String,
+	endsAt: String,
+	position: String,
+	description: String,
+	url: String,
+	tags: Array,
+})
 </script>
 
 <template>
+	<div
+		class="relative block h-full rounded-2xl border border-border outline-none transition-all group active:scale-[0.98]"
+	>
+		<a :href="url" target="_blank" class="h-full w-full outline-none">
+			<div class="p-4">
+				<h3 class="text-xl font-semibold text-white">{{ projectName }}</h3>
+				<p class="text-sm text-gray-400">{{ companyName }} ({{ startAt }} - {{ endsAt }})</p>
+				<p v-if="position" class="text-sm text-gray-300 font-medium">{{ position }}</p>
+				<p class="mt-2 text-gray-300 text-sm">{{ description }}</p>
+				<div class="mt-3 flex flex-wrap gap-2">
+					<span v-for="tag in tags" :key="tag" class="bg-gray-700 text-white text-xs px-2 py-1 rounded">{{
+						tag
+					}}</span>
+				</div>
+			</div>
+		</a>
+	</div>
+</template>
+
+<style scoped>
+div {
+	font-family: 'Inter', sans-serif;
+}
+</style>
+
+<!-- <template>
 	<div>
-		<div class=" pb-24">
-			<div
-				class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0 "
-			>
+		<div class="pb-24">
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
 				<div
 					v-for="(item, index) in studies"
 					:key="index"
 					class="max-w-[350px] bg-slate-800 px-6 py-2 rounded-xl transform mx-auto hover:scale-105 transition duration-300 shadow-lg"
 				>
+					<CardEffect :v-bind="item" />
+					<div class="text-white">
+						{{ item }}
+					</div>
 					<NuxtLink :to="item.url">
 						<div class="relative overflow-hidden">
 							<img
@@ -73,18 +110,11 @@ const { studies } = usePortfolioInfo()
 									name="material-symbols:nest-clock-farsight-analog-outline"
 									class="h-5 w-5 text-white"
 								/>
-								<p class="text-xs text-white">
-									{{ item.duration }} hours
-								</p>
+								<p class="text-xs text-white">{{ item.duration }} hours</p>
 							</div>
 							<div class="flex space-x-1 items-center">
-								<Icon
-									name="bx:bxs-videos"
-									class="h-5 w-5 text-white"
-								/>
-								<p class="text-xs text-white">
-									{{ item.lessons }} lessons
-								</p>
+								<Icon name="bx:bxs-videos" class="h-5 w-5 text-white" />
+								<p class="text-xs text-white">{{ item.lessons }} lessons</p>
 							</div>
 						</div>
 						<div class="flex space-x-1 items-center">
@@ -95,4 +125,4 @@ const { studies } = usePortfolioInfo()
 			</div>
 		</div>
 	</div>
-</template>
+</template> -->

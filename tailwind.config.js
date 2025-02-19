@@ -45,6 +45,9 @@ export default {
 				matrix: {
 					DEFAULT: '#1bf9ab',
 				},
+				accent: {
+					DEFAULT: '#ff8500',
+				},
 			},
 			fontFamily: {
 				matrix: ['Share Tech Mono', 'monospace'],
