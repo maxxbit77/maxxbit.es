@@ -44,7 +44,7 @@ const props = defineProps({
 						<span
 							v-for="tag in tags"
 							:key="tag"
-							class="text-xs py-1 rounded-lg transition-all text-accent hover:text-matrix"
+							class="text-xs py-1 rounded-lg transition-all text-accent hover:text-matrix font-matrix"
 						>
 							<a v-if="tag" :href="`https://www.google.com/search?q=${tag}`" target="_blanck">
 								#{{ tag }}

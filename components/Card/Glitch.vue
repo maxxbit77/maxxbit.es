@@ -1,26 +1,39 @@
 <script setup>
 const jsCode = [
-	'>const user = { name: "Alice", age: 25 };',
-	'>let counter = 0;',
-	'>function incrementCounter() { counter++; }',
-	'>const isUserLoggedIn = true;',
-	'>if (isUserLoggedIn) ',
-	'>const fetchData = async () => { await fetch("/api/data"); };',
-	'>const hacker = { name: "Elliot", age: 28 };',
-	'>const greeting = (name) => `Hello, ${name}!`;',
+	'>user={ name: "Elliot", age: 28 };',
+	'>function getUser(){ hacking(); }',
+	'>isUserLoggedIn=true;',
+	'>Data=async()=>{ await fetch("/api/user/${ID}"); };',
+	'>hacker={ alias: "MR.Robot", age: 28 };',
+	'>hacking= "detected";',
 ]
+
 const textLength = 300
-const randomText = ref(generateRandomText())
+const randomText = ref('')
+
 let interval
 
+const highlightWords = ['hacking', 'detected', 'MR.Robot']
+
 function generateRandomText() {
-	return Array.from({ length: textLength }, () => jsCode[Math.floor(Math.random() * jsCode.length)]).join(' ')
+	return Array.from({ length: textLength }, () => jsCode[Math.floor(Math.random() * jsCode.length)])
+		.join(' ')
+		.split(' ')
+		.map((word) => {
+			const cleanWord = word.replace(/[^\w.]/g, '')
+
+			if (highlightWords.includes(cleanWord)) {
+				return `<span class="text-matrix">${word}</span>`
+			}
+			return word
+		})
+		.join(' ')
 }
 
 onMounted(() => {
 	interval = setInterval(() => {
 		randomText.value = generateRandomText()
-	}, 350)
+	}, 700)
 })
 
 onBeforeUnmount(() => {
@@ -47,15 +60,9 @@ onBeforeUnmount(() => {
 			<div
 				class="relative bg-black h-56 w-full text-gray-300 font-mono p-4 rounded-b-lg border border-gray-700 overflow-hidden"
 			>
-				<p class="text-xs tracking-widest">{{ randomText }}</p>
+				<p class="text-xs tracking-widest" v-html="randomText"></p>
 				<span class="absolute top-2 right-2 bg-gray-600 text-white text-xs px-2 py-1 rounded">BUILDING...</span>
 			</div>
 		</div>
 	</ClientOnly>
 </template>
-
-<style scoped>
-div {
-	font-family: 'Courier New', Courier, monospace;
-}
-</style>

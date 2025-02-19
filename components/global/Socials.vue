@@ -1,6 +1,4 @@
 <script setup>
-import { initFlowbite } from 'flowbite'
-
 const { myInfo } = usePortfolioInfo()
 const socials = myInfo.socials
 const contact = myInfo.contact
@@ -13,97 +11,85 @@ const email = {
 	subject: 'Inquiry about your portfolio',
 	body: 'Hello Maxiel, I came across your portfolio and I am very interested in your work. Let’s connect!',
 }
-const subject = 'Inquiry about your portfolio'
-const body = 'Hello Maxiel, I came across your portfolio and I am very interested in your work. Let’s connect!'
+
+const openWhatsApp = () => {
+	const phoneNumber = '34699369519'
+	window.open(`https://wa.me/${phoneNumber}`, '_blank')
+}
 
 const copyText = () => {
 	navigator.clipboard.writeText(textToCopy.value)
 	copied.value === false ? (copied.value = true) : (copied.value = false)
 }
 
-onMounted(() => {
-	initFlowbite()
-})
+const buttonDescription = ref('Send me an email')
 </script>
 <template>
-	<div
-		class="md:mt-8 flex-wrap flex flex-col space-y-2 items-center justify-center space-x-4 md:block md:space-x-0 w-2/3"
-	>
-		<h3 class="text-accent font-matrix uppercase text-xl">Want to connect?</h3>
-		<ul class="text-secondary-400 flex justify-start items-center gap-x-2">
-			<li v-for="(social, index) in socials" :key="index">
-				<button
-					type="button"
-					class="hover:text-matrix h-5 font-matrix transition-all duration-500 ease-in-out border-r border-matrix pr-2"
-				>
-					<a :href="social.url" target="_blank" :aria-label="social.name">
-						<Icon v-if="social.icon" :name="social.icon" class="h-8 w-8" />
-						<span v-else>
-							{{ social.name }}
-						</span>
-					</a>
-				</button>
-			</li>
-			<li class="w-full">
-				<a href="/CV-Maxi Roig-2025-MAR-EN.pdf" download aria-label="Download CV">
-					<div
-						class="font-matrix w-full transition-all hover:text-matrix duration-500 ease-in-out text-white"
-					>
-						Read CV
-					</div>
-				</a>
-			</li>
-		</ul>
-		<div
-			class="h-8 w-full rounded-lg bg-slate-800 px-2 text-gray-400 flex border items-center justify-between font-matrix"
-		>
-			{{ contact.email }}
-			<div class="space-x-2 flex items-center">
-				<div>
-					<button
-						@click="copyText"
-						data-tooltip-target="copy"
-						type="button"
-						aria-label="Copy"
-						class="hover:text-matrix-300 transition-all duration-300 ease-in"
-					>
-						<div class="">
-							<Icon v-if="!copied" name="pixelarticons:section-copy" class="size-6" />
-							<Icon v-else name="pixelarticons:check" class="size-6" />
-						</div>
-					</button>
-					<div
-						id="copy"
-						role="tooltip"
-						class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-					>
-						{{ copied === true ? 'Copied' : 'Copy' }}
-						<div class="tooltip-arrow" data-popper-arrow></div>
-					</div>
-				</div>
+	<div class="mt-6 flex flex-col space-y-10 justify-center space-x-4 md:block md:space-x-0 w-2/3">
+		<div class="space-x-2 flex items-end transition-all">
+			<button
+				@mouseenter="buttonDescription = 'Copy email to clipboard'"
+				@mouseleave="buttonDescription = 'Send me an email'"
+				@click="copyText"
+				class="group relative transition-all duration-300 ease-in border border-gray-600 hover:border-matrix rounded-xl p-2"
+			>
+				<Icon
+					name="lucide:copy"
+					class="size-6 text-white transition-colors duration-300 ease-in group-hover:text-matrix"
+				/>
+			</button>
 
-				<div>
-					<button data-tooltip-target="send" type="button" aria-label="Send">
-						<a
-							:href="`mailto:${email.myEmail}?subject=${encodeURIComponent(email.subject)}&body=${encodeURIComponent(email.body)}`"
-							aria-label="Send email"
-						>
-							<Icon
-								name="pixelarticons:mail-arrow-right"
-								class="size-6 text-gray-500 transition-all duration-500 ease-in-out hover:text-matrix-300"
-							/>
-						</a>
-					</button>
-					<div
-						id="send"
-						role="tooltip"
-						class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-					>
-						Send Email
-						<div class="tooltip-arrow" data-popper-arrow></div>
-					</div>
+			<button
+				@mouseenter="buttonDescription = 'Send Email'"
+				@mouseleave="buttonDescription = 'Send me an email'"
+				class="group relative transition-all duration-300 ease-in border border-gray-600 hover:border-matrix rounded-xl p-2"
+			>
+				<a
+					:href="`mailto:${email.myEmail}?subject=${encodeURIComponent(email.subject)}&body=${encodeURIComponent(email.body)}`"
+					aria-label="Send email"
+				>
+					<Icon
+						name="lucide:mail-plus"
+						class="size-6 text-white transition-colors duration-300 ease-in group-hover:text-matrix"
+					/>
+				</a>
+			</button>
+
+			<button
+				@mouseenter="buttonDescription = 'WhatsApp chat'"
+				@mouseleave="buttonDescription = 'Send me an email'"
+				@click="openWhatsApp"
+				class="group relative transition-all duration-300 ease-in border border-gray-600 hover:border-matrix rounded-xl p-2"
+			>
+				<Icon
+					name="garden:whatsapp-stroke-16"
+					class="size-6 text-white transition-colors duration-300 ease-in group-hover:text-matrix"
+				/>
+			</button>
+
+			<div>
+				<div class="text-accent font-matrix uppercase text-xl">Want to chat?</div>
+				<div class="text-sm" :class="buttonDescription === 'Send me an email' ? 'text-gray-500' : 'text-white'">
+					{{ buttonDescription }}
 				</div>
 			</div>
+		</div>
+		<div class="flex flex-col">
+			<h3 class="text-2xl text-accent font-matrix uppercase">Find me online</h3>
+			<ul class="text-secondary-400 flex justify-start items-center gap-x-4 text-md">
+				<li v-for="(social, index) in socials" :key="index">
+					<div>
+						<a :href="social.url" target="_blank" :aria-label="social.name">
+							<EffectUnderscore> {{ social.name }} </EffectUnderscore>
+						</a>
+					</div>
+				</li>
+				<li>
+					<a href="/CV-Maxi Roig-2025-MAR-EN.pdf" download aria-label="Download CV">
+						<EffectUnderscore> Read CV </EffectUnderscore>
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </template>

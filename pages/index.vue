@@ -11,6 +11,8 @@ useSeoMeta({
 	twitterImage: '/brand/meta.png',
 	twitterCard: 'Portfolio developed with Vue/Nuxt/Tailwind',
 })
+
+const professionalExperienceData = computed(() => usePortfolioInfo().experience)
 </script>
 
 <template>
@@ -23,13 +25,13 @@ useSeoMeta({
 			<MatrixEffect />
 		</div>
 		<section>
-			<Experience id="experience" />
+			<WorkExperiences :data="professionalExperienceData" />
 		</section>
 		<section>
-			<Projects id="projects" />
+			<Projects />
 		</section>
 		<section>
-			<Studies id="studies" />
+			<Studies />
 		</section>
 	</div>
 </template>
