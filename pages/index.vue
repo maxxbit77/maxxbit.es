@@ -13,6 +13,7 @@ useSeoMeta({
 })
 
 const professionalExperienceData = computed(() => usePortfolioInfo().experience)
+const coursesData = computed(() => usePortfolioInfo().courses)
 </script>
 
 <template>
@@ -30,8 +31,11 @@ const professionalExperienceData = computed(() => usePortfolioInfo().experience)
 		<section>
 			<Projects />
 		</section>
-		<section>
-			<Studies />
+		<!-- <section>
+			<AnimationsChain />
+		</section> -->
+		<section class="mb-12">
+			<Courses :data="coursesData" />
 		</section>
 	</div>
 </template>

@@ -17,56 +17,60 @@ const props = defineProps({
 
 <template>
 	<ClientOnly>
-		<div class="coin-tile relative block h-full rounded-lg p-4 bg-gray-900 overflow-hidden group">
+		<div class="coin-tile relative block h-full rounded-lg bg-gray-900 overflow-hidden group p-4">
 			<a :href="url" target="_blank">
-				<div class="flex flex-col space-y-4">
-					<div class="p-1 relative z-10">
+				<div class="">
+					<div class="relative z-10">
 						<img
 							v-if="image"
 							loading="lazy"
 							:src="image.url"
-							class="min-w-full rounded-lg cursor-pointer"
+							class="rounded-lg cursor-pointer"
 							:alt="image.alt"
 						/>
 						<CardGlitch v-else />
 					</div>
-
-					<div>
-						<div class="flex justify-between items-end">
-							<span class="block text-xl font-matrix text-accent font-semibold">
-								{{ projectName }}
-							</span>
-							<span class="text-gray-500 text-sm font-matrix"> {{ startAt }} - {{ endsAt }} </span>
-						</div>
-						<h3 class="text-gray-500 text-sm font-matrix">
-							{{ companyName }}
-						</h3>
-					</div>
-
-					<div class="text-white text-xs">
-						<div
-							v-for="(responsability, index) in responsibilities"
-							:key="index"
-							class="flex items-end space-x-0.4 space-y-1"
-						>
-							<Icon name="material-symbols:play-arrow-outline" class="text-white size-4" />
-							<p class="">
-								{{ responsability }}
-							</p>
-						</div>
-					</div>
-					<div>
-						<div class="flex flex-wrap gap-2">
-							<span v-for="tag in tags" :key="tag" class="text-xs py-1 rounded-lg text-matrix">
-								<span
-									class="border border-matrix rounded-xl px-2 py-1 font-matrix group-hover:border-white"
-									v-if="tag"
-									:href="`https://www.google.com/search?q=${tag}`"
-									target="_blank"
-								>
-									{{ tag }}
+					<div class="flex flex-col space-y-4">
+						<div>
+							<div class="flex justify-between items-end">
+								<span class="block text-xl font-matrix text-accent font-semibold">
+									{{ projectName }}
 								</span>
-							</span>
+								<span class="text-gray-500 text-sm font-matrix"> {{ startAt }} - {{ endsAt }} </span>
+							</div>
+							<h3 class="text-gray-500 text-sm font-matrix">
+								{{ companyName }}
+							</h3>
+						</div>
+
+						<div class="text-white text-xs">
+							<div
+								v-for="(responsability, index) in responsibilities"
+								:key="index"
+								class="flex items-end space-x-0.4 space-y-1 group-hover:space-x-1"
+							>
+								<Icon
+									name="material-symbols:play-arrow-outline"
+									class="text-white size-4 group-hover:text-matrix group-hover:scale-150 transition-all"
+								/>
+								<p class="">
+									{{ responsability }}
+								</p>
+							</div>
+						</div>
+						<div>
+							<div class="flex flex-wrap gap-2">
+								<span v-for="tag in tags" :key="tag" class="text-xs py-1 rounded-lg text-white">
+									<span
+										class="border border-matrix rounded-xl px-2 py-1 group-hover:border-white"
+										v-if="tag"
+										:href="`https://www.google.com/search?q=${tag}`"
+										target="_blank"
+									>
+										{{ tag }}
+									</span>
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>

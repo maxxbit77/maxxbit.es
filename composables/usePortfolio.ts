@@ -56,11 +56,9 @@ export const usePortfolioInfo = () => {
 				'Developed an internal ticketing platform.',
 				'Implemented interactive SVG seat selection.',
 				'Enhanced UX for ticket purchasing.',
-				'Optimized event seat visualization.',
 				'Improved app performance and accessibility.',
 				'Integrated payment processing.',
 				'Developed tools for event management.',
-				'Compatibility and responsiveness.',
 			],
 			url: 'https://beonworldwide.com/es',
 			tags: [
@@ -88,8 +86,6 @@ export const usePortfolioInfo = () => {
 			position: 'Front end Developer',
 			responsibilities: [
 				'Designed an intuitive UI.',
-				'Implemented a directory for newsletters.',
-				'Optimized search and filtering.',
 				'Features for advertisers and creators.',
 				'Developed user profile system.',
 				'Ensured responsive and accessible design.',
@@ -110,14 +106,12 @@ export const usePortfolioInfo = () => {
 			endsAt: '2023',
 			position: 'Front end Developer',
 			responsibilities: [
-				'Integrated pre-configured essential features.',
 				'Developed a Vue 3 & Nuxt-based boilerplate.',
 				'Simplified website deployment process.',
 				'Optimized performance for fast loading.',
 				'Ensured SEO best practices.',
 				'Designed setup for non-developers.',
 				'Scalability and maintainability.',
-				'Automated deployment workflows.',
 			],
 			url: 'https://rapidlaunch.it/',
 			tags: [
@@ -128,7 +122,6 @@ export const usePortfolioInfo = () => {
 				'Tailwind',
 				'Pinia',
 				'Radix',
-				'Node js',
 				'Shadcn',
 				'Vitest',
 				'REST API',
@@ -146,25 +139,11 @@ export const usePortfolioInfo = () => {
 				'Developed an AI-powered report generation.',
 				'Integrated market analysis tools for ideas.',
 				'Algorithms for idea feasibility assessment.',
-				'Journey from idea submission to report.',
 				'Optimized the system for quick insights.',
 				'Ensured accurate data analysis.',
-				'Collaborated with earlybirds to refine feat.',
 			],
 			url: 'https://horizonhub.io/',
-			tags: [
-				'JS(ES6)',
-				'Vue 3',
-				'Nuxt 3',
-				'TypeScript',
-				'Tailwind',
-				'Pinia',
-				'axios',
-				'shurikenUI',
-				'webpack',
-				'REST API',
-				'headlessUI',
-			],
+			tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'axios', 'REST API', 'headlessUI'],
 			image: { url: '/images/experience/mockup-hh.jpg', alt: 'mockup HorizonHub' },
 		},
 		{
@@ -180,19 +159,15 @@ export const usePortfolioInfo = () => {
 				'Implemented responsive design.',
 				'Optimized website speed and performance.',
 				'Ensured smooth user experience.',
-				'Created custom types for card management.',
-				'Integrated e-commerce in-game purchases.',
 			],
 			url: 'https://twitter.com/nfutcards',
 			tags: [
-				'Wordpress',
 				'HTML5',
 				'Css3',
 				'Block Editor',
 				'Elementor',
 				'Theme Customization',
 				'FSE (Full Site Editing)',
-				'Responsive Design',
 				'UI/UX',
 			],
 			image: { url: '/images/experience/mockup-nfut.jpg', alt: 'mockup NFUTCards' },
@@ -207,7 +182,7 @@ export const usePortfolioInfo = () => {
 			endsAt: 'Now',
 			position: '',
 			description:
-				'Building a financial management application with Vue 3, TypeScript, Tailwind UI, and D3.js. The frontend is deployed on Vercel, while the backend (to be built with Firebase) will handle API integrations and data management.',
+				'Personal finance management application that helps users track their bank accounts, cash, investments, and cryptocurrencies. It provides a clear overview of financial status with interactive charts and real-time market data.',
 			url: 'https://github.com/maxxbit77/finance-manager',
 			tags: [
 				'Bitcoin',
@@ -237,7 +212,7 @@ export const usePortfolioInfo = () => {
 			tags: ['Real-time Location', 'Emotions', 'Social', 'Map', 'Geolocation', 'Emotes', 'Mood', 'Feelings'],
 		},
 	]
-	const studies = [
+	const courses = [
 		{
 			courseName: 'NodeJS - The Complete Guide',
 			author: 'Maximilian Schwarzmuller',
@@ -344,7 +319,7 @@ export const usePortfolioInfo = () => {
 		myInfo,
 		experience,
 		projects,
-		studies,
+		courses,
 		footer,
 	}
 }
