@@ -9,6 +9,7 @@ const props = defineProps({
 	startAt: String,
 	endsAt: String,
 	position: String,
+	description: String,
 	responsibilities: Array,
 	url: String,
 	tags: Array,
@@ -17,64 +18,43 @@ const props = defineProps({
 
 <template>
 	<ClientOnly>
-		<div class="coin-tile relative block h-full rounded-lg bg-gray-900 overflow-hidden group p-4 cursor-pointer">
-			<a :href="url" target="_blank">
-				<div class="">
-					<div class="relative z-10">
+		<div class="coin-tile relative h-full rounded-lg bg-gray-900 overflow-hidden group p-4">
+			<span class="text-gray-500 flex justify-end text-sm font-matrix"> {{ startAt }} - {{ endsAt }} </span>
+			<div>
+				<div class="relative z-10">
+					<a :href="url" target="_blank">
 						<img
 							v-if="image"
 							loading="lazy"
 							:src="image.url"
-							class="rounded-lg group-hover:scale-110 transition-all duration-300 group-hover:-translate-y-1.5"
+							class="rounded-lg transition-all duration-300"
 							:alt="image.alt"
 						/>
-						<CardGlitch v-else />
-					</div>
-					<div class="flex flex-col space-y-4 mt-2">
-						<div>
-							<div class="flex justify-between items-end">
-								<span class="block text-xl font-matrix text-accent font-semibold">
-									{{ projectName }}
-								</span>
-								<span class="text-gray-500 text-sm font-matrix"> {{ startAt }} - {{ endsAt }} </span>
-							</div>
+					</a>
+				</div>
+				<div class="flex flex-col space-y-4 mt-2">
+					<div>
+						<div class="flex justify-between items-end">
+							<span class="block text-xl font-matrix text-accent font-semibold">
+								{{ projectName }}
+							</span>
 							<h3 class="text-gray-500 text-sm font-matrix">
 								{{ companyName }}
 							</h3>
 						</div>
+					</div>
 
-						<div class="text-white text-xs">
-							<div
-								v-for="(responsability, index) in responsibilities"
-								:key="index"
-								class="flex items-end space-x-0.4 space-y-1 group-hover:space-x-1"
-							>
-								<Icon
-									name="material-symbols:play-arrow-outline"
-									class="text-white size-4 group-hover:text-matrix group-hover:scale-150 transition-all"
-								/>
-								<p class="">
-									{{ responsability }}
-								</p>
-							</div>
-						</div>
-						<div>
-							<div class="flex flex-wrap gap-2">
-								<span v-for="tag in tags" :key="tag" class="text-xs py-1 rounded-lg text-white">
-									<span
-										class="border border-matrix rounded-xl px-2 py-1 group-hover:border-white"
-										v-if="tag"
-										:href="`https://www.google.com/search?q=${tag}`"
-										target="_blank"
-									>
-										{{ tag }}
-									</span>
-								</span>
-							</div>
-						</div>
+					<p class="text-gray-300 text-sm">
+						{{ description }}
+					</p>
+					<div class="text-white text-xs">
+						<CollapsableText title="Responsabilities" :items="responsibilities" />
+					</div>
+					<div>
+						<CollapsableTags title="Technologies" :items="tags" />
 					</div>
 				</div>
-			</a>
+			</div>
 		</div>
 	</ClientOnly>
 </template>

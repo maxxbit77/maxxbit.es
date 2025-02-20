@@ -2,16 +2,29 @@
 const props = defineProps({
 	data: Array,
 })
+const fullData = ref(props.data)
+const showAll = ref(false)
+
+const experienceData = computed(() => {
+	if (!showAll.value) {
+		return fullData.value.slice(0, 4)
+	} else {
+		return fullData.value
+	}
+})
 </script>
 <template>
 	<div>
 		<section class="mt-24">
-			<div class="uppercase text-3xl text-white font-matrix">
-				Professional Experience
-				<div class="border border-secondary-400 w-full" />
+			<div class="uppercase text-3xl text-white font-matrix">Experience</div>
+			<div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
+				<CardExperience v-for="(item, index) in experienceData" :key="index" v-bind="item" />
 			</div>
-			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-				<CardExperience v-for="(item, index) in data" :key="index" v-bind="item" />
+			<div
+				@click="showAll = !showAll"
+				class="text-accent font-matrix text-end cursor-pointer mt-2 transition-all"
+			>
+				{{ showAll ? '<< Show less' : 'Show more >>' }}
 			</div>
 		</section>
 	</div>

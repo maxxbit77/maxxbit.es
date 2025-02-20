@@ -17,7 +17,7 @@ const coursesData = computed(() => usePortfolioInfo().courses)
 </script>
 
 <template>
-	<div class="max-w-5xl mx-auto px-4 min-h-screen">
+	<div class="max-w-3xl mx-auto px-4 min-h-screen">
 		<header>
 			<Header />
 		</header>
@@ -29,7 +29,8 @@ const coursesData = computed(() => usePortfolioInfo().courses)
 			<WorkExperiences :data="professionalExperienceData" />
 		</section>
 		<section>
-			<Projects />
+			<!-- <Projects /> -->
+			<WhatIsComing />
 		</section>
 		<!-- <section>
 			<AnimationsChain />

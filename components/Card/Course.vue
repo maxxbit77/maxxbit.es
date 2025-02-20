@@ -16,23 +16,17 @@ const props = defineProps({
 </script>
 
 <template>
-	<div class="bg-slate-800 rounded-xl transform mx-auto shadow-xl hover:shadow-matrix transition duration-300 p-4">
+	<div class="bg-black rounded-xl transform mx-auto transition duration-300 p-4 border border-gray-800">
 		<a :href="url">
 			<div class="relative overflow-hidden w-[250px]">
-				<img
-					v-if="image"
-					class="w-full h-44 rounded-lg border"
-					:src="image.url"
-					:alt="image.alt"
-					loading="lazy"
-				/>
+				<img v-if="image" class="w-full h-44 rounded-lg" :src="image.url" :alt="image.alt" loading="lazy" />
 				<span
-					class="border-primary-600 absolute top-4 -right-12 w-44 text-center rotate-[40deg] border-4 bg-matrix text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg"
+					class="border-primary-600 font-matrix absolute top-4 -right-12 w-44 text-center rotate-[40deg] border-4 bg-matrix text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg"
 				>
 					{{ status }}
 				</span>
 			</div>
-			<h1 class="mt-4 text-white font-bold cursor-pointer">
+			<h1 class="mt-4 text-white font-bold cursor-pointer font-matrix">
 				{{ courseName }}
 			</h1>
 			<div class="flex items-center space-x-3 my-1">

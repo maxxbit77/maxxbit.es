@@ -6,7 +6,7 @@ const data = computed(() => usePortfolioInfo().projects)
 	<div>
 		<section class="py-12">
 			<div class="uppercase text-3xl text-white font-matrix">
-				Projects Coming...
+				What's Coming...
 				<div class="border border-secondary-400 w-full" />
 			</div>
 

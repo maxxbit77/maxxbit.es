@@ -25,7 +25,7 @@ const copyText = () => {
 const buttonDescription = ref('Send me an email')
 </script>
 <template>
-	<div class="mt-6 flex flex-col space-y-10 justify-center space-x-4 md:block md:space-x-0 w-2/3">
+	<div class="mt-6 flex flex-col space-y-10 justify-center w-full">
 		<div class="space-x-2 flex items-end transition-all">
 			<button
 				@mouseenter="buttonDescription = 'Copy email to clipboard'"
@@ -75,8 +75,8 @@ const buttonDescription = ref('Send me an email')
 			</div>
 		</div>
 		<div class="flex flex-col">
-			<h3 class="text-2xl text-accent font-matrix uppercase">Find me online</h3>
-			<ul class="text-secondary-400 flex justify-start items-center gap-x-4 text-md">
+			<h3 class="text-2xl text-accent font-matrix uppercase">STALK ME HERE 👀</h3>
+			<ul class="flex items-center space-x-4 text-md">
 				<li v-for="(social, index) in socials" :key="index">
 					<div>
 						<a :href="social.url" target="_blank" :aria-label="social.name">
