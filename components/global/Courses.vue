@@ -6,16 +6,20 @@ const duplicatedItems = computed(() => [...props.data, ...props.data, ...props.d
 
 const carousel = ref(null)
 </script>
-
 <template>
-	<div>
+	<div class="relative h-[600px] overflow-hidden w-full">
 		<div class="uppercase text-3xl text-white font-matrix">
 			Crash Courses
 			<div class="border border-secondary-400 w-full" />
 		</div>
-		<div class="w-full mt-6">
-			<div ref="carousel" class="flex gap-4 animate-marquee">
-				<CardCourse v-if="data" v-for="(item, index) in duplicatedItems" :key="index" v-bind="item" />
+
+		<!-- SVG como fondo -->
+		<SvgGradientMatrixCircle class="absolute z-10 top-28 left-1/2 w-full h-[300px] blur-2xl -translate-x-1/2" />
+
+		<!-- Contenedor con difuminado -->
+		<div class="relative mt-6 z-20 overflow-hidden w-full fade-mask">
+			<div ref="carousel" class="flex gap-4 animate-marquee w-[300%]">
+				<CardCourse v-for="(item, index) in duplicatedItems" :key="index" v-bind="item" />
 			</div>
 		</div>
 	</div>
@@ -27,13 +31,19 @@ const carousel = ref(null)
 		transform: translateX(0%);
 	}
 	to {
-		transform: translateX(-70%);
+		transform: translateX(-100%);
 	}
 }
 
 .animate-marquee {
 	display: flex;
-	min-width: 500%; /* Asegura que el contenido extra no se corte */
+	width: 300%;
 	animation: marquee 30s linear infinite;
+}
+
+/* Aplica el efecto de difuminado en los bordes */
+.fade-mask {
+	-webkit-mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+	mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
 }
 </style>

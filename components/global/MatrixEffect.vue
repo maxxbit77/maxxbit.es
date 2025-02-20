@@ -92,7 +92,7 @@ onMounted(() => {
 </script>
 
 <template>
-	<canvas ref="canvasRef" class="matrix-canvas"></canvas>
+	<canvas ref="canvasRef" class="matrix-canvas opacity-50 lg:opacity-100"></canvas>
 </template>
 
 <style scoped>
@@ -104,7 +104,7 @@ onMounted(() => {
 	height: 100%;
 	pointer-events: none;
 
-	-webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
-	mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+	-webkit-mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+	mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
 }
 </style>

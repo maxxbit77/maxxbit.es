@@ -43,10 +43,14 @@ export default {
 					950: '#0C0C0E',
 				},
 				matrix: {
+					light: '#72DCB7',
 					DEFAULT: '#1bf9ab',
+					dark: '#349573',
 				},
 				accent: {
+					light: '##DB9D5A',
 					DEFAULT: '#ff8500',
+					dark: '#CF7717',
 				},
 			},
 			fontFamily: {
