@@ -1,5 +1,4 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { TransitionRoot } from '@headlessui/vue'
 
 const props = defineProps({
@@ -8,9 +7,8 @@ const props = defineProps({
 
 const data = computed(() => usePortfolioInfo()?.[props.id] || null)
 
-const imageExpanded = ref(false)
 const activeIndex = ref(null)
-const openImage = ref(null) // Estado para abrir la imagen en modal
+const openImage = ref(null)
 
 const handleMouseOver = (index, project) => {
 	activeIndex.value = index
@@ -19,17 +17,14 @@ const handleMouseLeave = () => {
 	activeIndex.value = null
 }
 
-// Abrir imagen al hacer clic
 const openFullImage = (imageUrl) => {
 	openImage.value = imageUrl
 }
 
-// Cerrar imagen al hacer clic fuera o presionar ESC
 const closeFullImage = () => {
 	openImage.value = null
 }
 
-// Detectar la tecla ESC para cerrar la imagen
 const handleKeyDown = (event) => {
 	if (event.key === 'Escape') closeFullImage()
 }
@@ -56,12 +51,14 @@ onUnmounted(() => {
 				<div>
 					<div class="relative hidden md:block md:w-[480px] md:h-[380px] p-1">
 						<img
+							v-if="project?.image?.url"
 							@click="openFullImage(project?.image.url)"
 							loading="lazy"
 							:src="project?.image.url"
 							class="min-w-full rounded-lg cursor-pointer hover:scale-105 transition-transform"
 							:alt="project?.image.alt"
 						/>
+						<CardGlitch v-else />
 					</div>
 				</div>
 				<a :href="project.url">
@@ -71,13 +68,13 @@ onUnmounted(() => {
 						</div>
 						<div class="col-span-3">
 							<div class="overflow-wrap break-word">
-								<h3 class="text-white text-xl" :class="{ '!text-primary-500': activeIndex === index }">
+								<h3 class="text-white text-xl" :class="{ '!text-matrix-500': activeIndex === index }">
 									{{ project.projectName }}
 									<Icon
 										name="material-symbols-light:arrow-outward"
 										class="h-5 w-5"
 										:class="{
-											'text-primary-500 translate-x-1 -translate-y-1 transition-all':
+											'text-matrix-500 translate-x-1 -translate-y-1 transition-all':
 												activeIndex === index,
 										}"
 									/>

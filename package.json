@@ -1,34 +1,34 @@
 {
-  "name": "marodev-portfolio",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxt/image": "^1.3.0",
-    "@nuxtjs/tailwindcss": "^6.11.1",
-    "autoprefixer": "^10.4.17",
-    "eslint": "^8.7.0",
-    "nuxt": "^3.9.3",
-    "nuxt-icon": "^0.6.8",
-    "postcss": "^8.4.33",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.4.1",
-    "tailwindcss": "^3.4.1",
-    "vue": "^3.4.14",
-    "vue-eslint-parser": "^8.0.0",
-    "vue-router": "^4.2.5"
-  },
-  "dependencies": {
-    "@headlessui/vue": "^1.7.18",
-    "@nuxt/image": "^1.3.0",
-    "@tresjs/nuxt": "^3.0.7",
-    "flowbite": "^2.2.1",
-    "three": "^0.173.0"
-  }
+	"name": "maxxbit-portfolio",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@nuxt/image": "^1.3.0",
+		"@nuxtjs/tailwindcss": "^6.11.1",
+		"autoprefixer": "^10.4.17",
+		"eslint": "^8.7.0",
+		"nuxt": "^3.15.4",
+		"nuxt-icon": "^0.6.8",
+		"postcss": "^8.4.33",
+		"prettier": "^3.4.2",
+		"prettier-plugin-tailwindcss": "^0.4.1",
+		"tailwindcss": "^3.4.1",
+		"vue": "^3.4.14",
+		"vue-eslint-parser": "^8.0.0",
+		"vue-router": "^4.2.5"
+	},
+	"dependencies": {
+		"@headlessui/vue": "^1.7.18",
+		"@nuxt/image": "^1.3.0",
+		"@tresjs/nuxt": "^3.0.7",
+		"flowbite": "^2.2.1",
+		"three": "^0.173.0"
+	}
 }

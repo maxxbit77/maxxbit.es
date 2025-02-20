@@ -1,10 +1,5 @@
 <script setup>
-import {
-	Dialog,
-	DialogPanel,
-	TransitionChild,
-	TransitionRoot,
-} from '@headlessui/vue'
+import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 
 const { navBar } = usePortfolioInfo()
 const { items, logo } = navBar
@@ -43,21 +38,11 @@ const { isMobileMenuOpen, close } = useMobileMenu()
 				>
 					<div class="flex items-center justify-between">
 						<div class="flex flex-1 shrink-0">
-							<img
-								class="-m-1.5 p-1.5 shrink-0 flex-1"
-								:src="logo"
-							/>
+							<img class="-m-1.5 p-1.5 shrink-0 flex-1" :src="logo" />
 						</div>
-						<button
-							class="-m-2.5 rounded-md p-2.5 text-gray-700"
-							@click="close"
-						>
+						<button class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="close">
 							<span class="sr-only">Close menu</span>
-							<Icon
-								name="heroicons:x-mark"
-								class="h-6 w-6"
-								aria-hidden="true"
-							/>
+							<Icon name="heroicons:x-mark" class="h-6 w-6" aria-hidden="true" />
 						</button>
 					</div>
 					<div class="mt-6 flow-root">
@@ -67,7 +52,7 @@ const { isMobileMenuOpen, close } = useMobileMenu()
 									v-for="item in items"
 									:key="item.text"
 									:to="item.url"
-									class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-slate-100 hover:bg-primary-600"
+									class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-slate-100 hover:bg-matrix-600"
 									@click="close"
 								>
 									{{ item.text }}

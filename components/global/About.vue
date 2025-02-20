@@ -14,11 +14,11 @@
 			</p>
 			<br />
 			<p class="inline">I began my studies supervised and sponsored by great developers like</p>
-			<a class="text-primary-500" href="https://www.linkedin.com/in/marcoshroig/" target="_blank">
+			<a class="text-matrix" href="https://www.linkedin.com/in/marcoshroig/" target="_blank">
 				<span class="inline">Marcos Roig</span>
 			</a>
 			<span class="inline"> and </span>
-			<a class="text-primary-500" href="https://www.linkedin.com/in/boudydegeer/" target="_blank">
+			<a class="text-matrix" href="https://www.linkedin.com/in/boudydegeer/" target="_blank">
 				<span class="inline">Boudy De Geer,</span>
 			</a>
 			<p>
