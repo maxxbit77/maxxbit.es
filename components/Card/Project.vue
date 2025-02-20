@@ -1,10 +1,6 @@
 <script setup>
 const props = defineProps({
 	projectName: String,
-	image: {
-		type: String,
-		required: false,
-	},
 	companyName: String,
 	startAt: String,
 	endsAt: String,
@@ -19,20 +15,11 @@ const props = defineProps({
 	<ClientOnly>
 		<div class="block h-full rounded-2xl border border-gray-800 outline-none transition-all p-2">
 			<a :href="url" target="_blank">
-				<div class="hidden md:block p-1">
-					<img
-						v-if="image"
-						loading="lazy"
-						:src="image"
-						class="min-w-full rounded-lg cursor-pointer hover:scale-105 transition-transform"
-						:alt="projectName"
-					/>
-					<CardGlitch v-else />
+				<div class="p-1 perspective-dramatic">
+					<CardGlitch />
 				</div>
 				<div class="px-2">
-					<span
-						class="block text-lg text-matrix font-semibold text-matrix-300 group-hover:text-matrix-400 transition-all"
-					>
+					<span class="block text-lg text-matrix font-semibold font-matrix transition-all">
 						{{ projectName }}
 					</span>
 
@@ -44,7 +31,7 @@ const props = defineProps({
 						<span
 							v-for="tag in tags"
 							:key="tag"
-							class="text-xs py-1 rounded-lg transition-all text-accent hover:text-matrix font-matrix"
+							class="text-xs py-1 rounded-lg transition-all text-accent hover:text-matrix"
 						>
 							<a v-if="tag" :href="`https://www.google.com/search?q=${tag}`" target="_blanck">
 								#{{ tag }}

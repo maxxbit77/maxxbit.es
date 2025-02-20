@@ -17,7 +17,7 @@ const props = defineProps({
 
 <template>
 	<ClientOnly>
-		<div class="coin-tile relative block h-full rounded-lg bg-gray-900 overflow-hidden group p-4">
+		<div class="coin-tile relative block h-full rounded-lg bg-gray-900 overflow-hidden group p-4 cursor-pointer">
 			<a :href="url" target="_blank">
 				<div class="">
 					<div class="relative z-10">
@@ -25,12 +25,12 @@ const props = defineProps({
 							v-if="image"
 							loading="lazy"
 							:src="image.url"
-							class="rounded-lg cursor-pointer"
+							class="rounded-lg group-hover:scale-110 transition-all duration-300 group-hover:-translate-y-1.5"
 							:alt="image.alt"
 						/>
 						<CardGlitch v-else />
 					</div>
-					<div class="flex flex-col space-y-4">
+					<div class="flex flex-col space-y-4 mt-2">
 						<div>
 							<div class="flex justify-between items-end">
 								<span class="block text-xl font-matrix text-accent font-semibold">
@@ -102,7 +102,7 @@ const props = defineProps({
 	position: relative;
 	transition: all 0.3s ease-in-out;
 	border: 3px solid transparent;
-	border-radius: 12px; /* Redondear los bordes */
+	border-radius: 12px;
 	overflow: hidden;
 }
 
@@ -135,7 +135,7 @@ const props = defineProps({
 
 .coin-tile:hover {
 	animation: border-rotation 2s infinite linear;
-	border-color: #1af294; /* Color de borde durante la animación */
+	border-color: #1af294;
 }
 
 .coin-tile:hover .group-hover\:text-white {

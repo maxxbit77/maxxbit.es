@@ -12,13 +12,13 @@ import Cube from '~/components/animations/Cube.vue'
 				<Presentation />
 				<Socials />
 			</div>
-			<div>
+			<!-- <div>
 				<TresCanvas shadows alpha>
 					<TresPerspectiveCamera :args="[90, 1, 0.1, 1000]" />
 					<Cube />
 					<TresGridHelper :args="[10, 10]" />
 				</TresCanvas>
-			</div>
+			</div> -->
 		</header>
 	</div>
 </template>

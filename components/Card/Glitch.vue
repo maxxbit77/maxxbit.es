@@ -43,7 +43,7 @@ onBeforeUnmount(() => {
 
 <template>
 	<ClientOnly>
-		<div>
+		<div class="">
 			<div class="h-4 bg-gray-500 rounded-t-lg flex justify-between items-center px-2">
 				<div class="flex space-x-1">
 					<div class="rounded-full bg-red-500 size-2"></div>
@@ -60,7 +60,7 @@ onBeforeUnmount(() => {
 			<div
 				class="relative bg-black h-56 w-full text-gray-300 font-mono p-4 rounded-b-lg border border-gray-700 overflow-hidden"
 			>
-				<p class="text-xs tracking-widest" v-html="randomText"></p>
+				<p class="text-xs tracking-widest font-matrix" v-html="randomText"></p>
 				<span class="absolute top-2 right-2 bg-gray-600 text-white text-xs px-2 py-1 rounded">BUILDING...</span>
 			</div>
 		</div>
