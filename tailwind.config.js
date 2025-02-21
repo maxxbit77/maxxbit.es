@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
+	safelist: ['bg-slate-950'],
 	content: [
 		'./components/**/*.{js,vue,ts}',
 		'./layouts/**/*.vue',
