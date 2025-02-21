@@ -20,21 +20,19 @@ const coursesData = computed(() => usePortfolioInfo().courses)
 	<div class="max-w-3xl mx-auto px-4 min-h-screen">
 		<header>
 			<Header />
+			<div>
+				<MatrixEffect />
+			</div>
 		</header>
-
-		<div>
-			<MatrixEffect />
-		</div>
 		<section>
 			<WorkExperiences :data="professionalExperienceData" />
 		</section>
-		<section>
-			<!-- <Projects /> -->
+		<section class="mt-12">
 			<WhatIsComing />
 		</section>
-		<!-- <section>
-			<AnimationsChain />
-		</section> -->
+		<section class="mt-12">
+			<TechStack />
+		</section>
 		<section class="mb-12">
 			<Courses :data="coursesData" />
 		</section>

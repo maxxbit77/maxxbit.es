@@ -8,9 +8,9 @@ const carousel = ref(null)
 </script>
 <template>
 	<div class="relative h-[600px] overflow-hidden w-full">
-		<div class="uppercase text-3xl text-white font-matrix">
-			Crash Courses
-			<div class="border border-secondary-400 w-full" />
+		<div class="flex justify-center items-center space-x-1">
+			<h2 class="uppercase text-center text-3xl text-white font-matrix">Level Up Academy</h2>
+			<Icon name="catppuccin:certificate" class="size-8" />
 		</div>
 
 		<!-- SVG como fondo -->

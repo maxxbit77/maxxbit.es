@@ -18,7 +18,7 @@ const props = defineProps({
 
 <template>
 	<ClientOnly>
-		<div class="coin-tile relative h-full rounded-lg bg-gray-900 overflow-hidden group p-4">
+		<div class="coin-tile relative h-full rounded-lg bg-slate-950 overflow-hidden group p-4">
 			<span class="text-gray-500 flex justify-end text-sm font-matrix"> {{ startAt }} - {{ endsAt }} </span>
 			<div>
 				<div class="relative z-10">

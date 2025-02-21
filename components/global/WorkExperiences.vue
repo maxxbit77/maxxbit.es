@@ -16,7 +16,7 @@ const experienceData = computed(() => {
 <template>
 	<div>
 		<section class="mt-24">
-			<div class="uppercase text-3xl text-white font-matrix">Experience</div>
+			<h2 class="uppercase text-3xl text-white text-center font-matrix">XP Gained 🎮</h2>
 			<div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
 				<CardExperience v-for="(item, index) in experienceData" :key="index" v-bind="item" />
 			</div>
