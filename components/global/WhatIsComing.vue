@@ -8,9 +8,9 @@ const vibency = computed(() => data.value[1])
 </script>
 
 <template>
-	<div class="relative h-[800px] sm:h-[700px]">
+	<div class="relative mt-48 h-[800px] sm:h-[700px]">
 		<section>
-			<div class="mt-12 uppercase text-3xl text-white font-matrix">What's Cooking...?</div>
+			<div class="mt-12 uppercase text-3xl text-white text-center font-matrix">What's Cooking...?</div>
 			<div class="hidden md:block">
 				<div class="rainbow absolute top-[160px] z-10 translate-x-50 md:translate-x-52" />
 				<div class="bg-slate-950 h-12 w-48 absolute top-[225px] right-16" />
