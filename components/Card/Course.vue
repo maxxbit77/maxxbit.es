@@ -21,7 +21,7 @@ const props = defineProps({
 			<div class="relative overflow-hidden w-[250px]">
 				<img v-if="image" class="w-full h-44 rounded-lg" :src="image.url" :alt="image.alt" loading="lazy" />
 				<span
-					class="border-primary-600 font-matrix absolute top-4 -right-12 w-44 text-center rotate-[40deg] border-4 bg-matrix text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg"
+					class="border-accent font-matrix absolute top-4 -right-12 w-44 text-center rotate-[40deg] border-4 bg-matrix text-black font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg"
 				>
 					{{ status }}
 				</span>
