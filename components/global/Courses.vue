@@ -7,7 +7,7 @@ const duplicatedItems = computed(() => [...props.data, ...props.data, ...props.d
 const carousel = ref(null)
 </script>
 <template>
-	<div class="relative h-[600px] overflow-hidden w-full">
+	<div class="relative h-[600px] overflow-x-hidden w-full">
 		<div class="flex justify-center items-center space-x-1">
 			<TitleLine>Level Up Academy 🏆</TitleLine>
 		</div>

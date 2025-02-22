@@ -47,9 +47,11 @@ const props = defineProps({
 					<p class="text-gray-300 text-sm">
 						{{ description }}
 					</p>
+
 					<div class="text-white text-xs">
 						<CollapsableText title="Responsabilities" :items="responsibilities" />
 					</div>
+
 					<div>
 						<CollapsableTags title="Technologies" :items="tags" />
 					</div>

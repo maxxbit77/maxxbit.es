@@ -20,17 +20,30 @@ const toggle = () => {
 			</span>
 		</button>
 
-		<div v-show="isOpen" class="flex flex-wrap gap-2 mt-2">
-			<span v-for="tag in items" :key="tag" class="text-[10px] py-1 rounded-lg text-matrix">
-				<span
-					class="border border-matrix rounded-xl px-2 py-1"
-					v-if="tag"
-					:href="`https://www.google.com/search?q=${tag}`"
-					target="_blank"
-				>
-					{{ tag }}
+		<Transition name="fade">
+			<div v-show="isOpen" class="flex flex-wrap gap-2 mt-2">
+				<span v-for="tag in items" :key="tag" class="text-[10px] py-1 rounded-lg text-matrix">
+					<span
+						class="border border-matrix rounded-xl px-2 py-1"
+						v-if="tag"
+						:href="`https://www.google.com/search?q=${tag}`"
+						target="_blank"
+					>
+						{{ tag }}
+					</span>
 				</span>
-			</span>
-		</div>
+			</div>
+		</Transition>
 	</div>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
+</style>

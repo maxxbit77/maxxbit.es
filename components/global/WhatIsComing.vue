@@ -8,9 +8,9 @@ const vibency = computed(() => data.value[1])
 </script>
 
 <template>
-	<div class="relative mt-48 h-[800px] sm:h-[700px]">
+	<div class="relative h-[800px] sm:h-[600px]">
 		<section>
-			<TitleLine>What's Cooking...?</TitleLine>
+			<TitleLine>What's Cooking? ⏲</TitleLine>
 			<div class="hidden md:block">
 				<div class="rainbow absolute top-[160px] z-10 translate-x-50 md:translate-x-52" />
 				<div class="bg-slate-950 h-12 w-48 absolute top-[225px] right-16" />
@@ -20,7 +20,7 @@ const vibency = computed(() => data.value[1])
 				<div class="grid grid-col-1 sm:grid-cols-2 h-[300px] mt-12 sm:mt-0 items-center">
 					<div class="col-span-1">
 						<div class="w-full bg-black shadow-lg shadow-matrix p-6 rounded-lg">
-							<a :href="finances.url" target="_blank">
+							<a :href="vibency.url" target="_blank">
 								<div class="flex flex-col justify-start h-full relative cursor-pointer group">
 									<div class="flex justify-between items-center">
 										<div
@@ -30,7 +30,7 @@ const vibency = computed(() => data.value[1])
 										</div>
 										<Icon
 											name="mdi:github"
-											class="text-gray-400 size-6 group-hover:text-white group-hover:scale-125 transition-all"
+											class="text-gray-400 size-6 group-hover:text-white group-hover:scale-150 transition-all"
 										/>
 									</div>
 									<div class="text-sm mt-3">{{ vibency.description }}</div>
@@ -69,7 +69,7 @@ const vibency = computed(() => data.value[1])
 									</div>
 									<Icon
 										name="mdi:github"
-										class="text-gray-400 size-6 group-hover:text-white group-hover:scale-125 transition-all"
+										class="text-gray-400 size-6 group-hover:text-white group-hover:scale-150 transition-all"
 									/>
 								</div>
 								<div class="text-sm mt-3">{{ finances.description }}</div>

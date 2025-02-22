@@ -1,6 +1,6 @@
 <template>
 	<svg
-		fill="#000000"
+		:style="{ fill: 'white' }"
 		height="200px"
 		width="200px"
 		version="1.1"

@@ -20,8 +20,21 @@ const toggle = () => {
 			</span>
 		</button>
 
-		<ul v-show="isOpen" class="p-1 bg-slate-950 text-gray-300 transition-all space-y-1">
-			<li v-for="(item, index) in items" :key="index" class="text-sm">· {{ item }}</li>
-		</ul>
+		<Transition name="fade">
+			<ul v-show="isOpen" class="p-1 bg-slate-950 text-gray-300 transition-all space-y-1">
+				<li v-for="(item, index) in items" :key="index" class="text-sm">· {{ item }}</li>
+			</ul>
+		</Transition>
 	</div>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
+</style>

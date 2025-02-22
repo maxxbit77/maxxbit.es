@@ -24,16 +24,16 @@ const coursesData = computed(() => usePortfolioInfo().courses)
 				<MatrixEffect />
 			</div>
 		</header>
-		<section>
+		<section class="mt-24">
 			<WorkExperiences :data="professionalExperienceData" />
 		</section>
-		<section class="mt-12">
+		<section class="mt-24">
 			<WhatIsComing />
 		</section>
-		<section class="mt-12">
+		<section class="mt-24">
 			<TechStack />
 		</section>
-		<section class="mb-12">
+		<section class="mt-24">
 			<Courses :data="coursesData" />
 		</section>
 	</div>

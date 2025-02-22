@@ -15,8 +15,17 @@ const experienceData = computed(() => {
 </script>
 <template>
 	<div>
-		<section class="mt-24">
+		<div class="relative">
 			<TitleLine>XP Gained 🎮</TitleLine>
+			<div
+				class="absolute top-44 -left-24 z-0 w-[200px] h-[200px] bg-gradient-to-r from-matrix to-transparent blur-3xl opacity-30 transform translate-x-1/2 -translate-y-1/2"
+			/>
+			<div
+				class="absolute top-[600px] left-44 z-0 w-[200px] h-[200px] bg-gradient-to-r from-matrix to-transparent blur-3xl opacity-30 transform translate-x-1/2 -translate-y-1/2"
+			/>
+			<div
+				class="absolute -bottom-40 right-0 z-0 w-[200px] h-[200px] bg-gradient-to-r from-matrix to-transparent blur-3xl opacity-30 transform translate-x-1/2 -translate-y-1/2"
+			/>
 			<div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
 				<CardExperience v-for="(item, index) in experienceData" :key="index" v-bind="item" />
 			</div>
@@ -26,6 +35,6 @@ const experienceData = computed(() => {
 			>
 				{{ showAll ? '<< Show less' : 'Show more >>' }}
 			</div>
-		</section>
+		</div>
 	</div>
 </template>
