@@ -1,5 +1,4 @@
 <script setup>
-import { ProgressIndicator, ProgressRoot } from 'radix-vue'
 import {
 	LogosBootstrap,
 	LogosJs,
@@ -42,7 +41,7 @@ const smallIcons = [
 ]
 
 const mediumIcons = [
-	{ name: 'Tailwind CSS', component: LogosTailwind, skill: 95 },
+	{ name: 'Tailwind', component: LogosTailwind, skill: 95 },
 	{ name: 'Vite', component: LogosVite, skill: 70 },
 	{ name: 'API', component: LogosApi, skill: 70 },
 	{ name: 'CSS', component: LogosCss, skill: 80 },
@@ -74,118 +73,79 @@ const largeIcons = [
 	{ name: 'Notion', component: LogosNotion, skill: 80 },
 ]
 
-const totalMediumIcons = mediumIcons.length
-const totalLargeIcons = largeIcons.length
-const iconName = ref('')
-const iconSkill = ref('')
-const rotation = ref(0)
-
-const handleScroll = () => {
-	rotation.value = window.scrollY * 0.1
+const categories = {
+	'🖥️ Development & Frameworks': [
+		'Javascript',
+		'TypeScript',
+		'Vue.js 3',
+		'Nuxt.js 3',
+		'Node.js',
+		'API',
+		'JSON',
+		'D3.js',
+		'WordPress',
+	],
+	'🎨 Design & UI/UX': ['Tailwind', 'CSS', 'Radix UI', 'ShadCN', 'Vuetify', 'Bootstrap', 'SVG'],
+	'🛠️ Tools & DevOps': ['Git', 'GitHub', 'NPM', 'Vite', 'Docker', 'Sourcetree', 'Markdown'],
+	'📦 Backend & Databases': ['Firebase', 'Supabase', 'Postman'],
+	'📌 Productivity & Management': ['Notion', 'Jira', 'Confluence', 'Leaflet'],
 }
 
-function setIconName(name) {
-	iconName.value = name
-}
+const currentComponentCircle = ref(true)
+const showChangeButton = ref(false)
+const categorizedIcons = Object.fromEntries(
+	Object.entries(categories).map(([category, names]) => [
+		category,
+		[...smallIcons, ...mediumIcons, ...largeIcons].filter((icon) => names.includes(icon.name)),
+	])
+)
 
-function setIconSkill(skill) {
-	iconSkill.value = skill
-}
-
-function handleOver(icon) {
-	console.log(icon.name)
-	setIconName(icon.name)
-	setIconSkill(icon.skill)
-}
-
-function handleOut() {
-	setIconName('')
-	setIconSkill('')
-}
-
-onMounted(() => window.addEventListener('scroll', handleScroll))
-onUnmounted(() => window.removeEventListener('scroll', handleScroll))
+onMounted(() => (window.innerHeight < 800 ? (showChangeButton.value = false) : (showChangeButton.value = true)))
 </script>
 
 <template>
-	<div @mouseleave="handleOut" class="mb-24">
+	<div class="relative">
+		<div
+			class="absolute -bottom-[400px] right-0 z-0 w-[300px] h-[300px] bg-gradient-to-r from-matrix to-transparent blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"
+		/>
+		<div
+			class="absolute top-[500px] right-24 z-0 w-[200px] h-[200px] bg-gradient-to-r from-matrix-dark to-transparent blur-3xl opacity-30 transform translate-x-1/2 -translate-y-1/2"
+		/>
+		<div
+			class="absolute top-0 -left-24 z-0 w-[200px] h-[200px] bg-gradient-to-r from-accent to-transparent blur-3xl opacity-30 transform"
+		/>
+
 		<TitleLine>The Tech Shelf 📚</TitleLine>
-		<div class="w-64 h-10 mx-auto">
-			<div v-if="iconName" class="flex flex-col space-y-1">
-				<div class="text-center h-5 text-matrix font-matrix text-lg transition-all ease-in-out">
-					<p>{{ iconName }}</p>
-				</div>
-				<div class="flex justify-center">
-					<ProgressRoot :value="iconSkill" class="w-full h-1 bg-gray-700 rounded">
-						<ProgressIndicator
-							class="h-1 bg-matrix rounded transition-all duration-300"
-							:style="{ width: `${iconSkill}%` }"
-						/>
-					</ProgressRoot>
-				</div>
-				<div class="flex justify-between items-center font-matrix text-gray-400 text-xs">
-					<span>0%</span>
-					<p>Skill level</p>
-					<span>{{ iconSkill }}%</span>
-				</div>
-			</div>
-		</div>
 
-		<div class="relative size-[600px] mx-auto mt-12">
-			<!-- Small icons grid (2x2) -->
-			<div class="absolute size-[160px] top-[220px] left-[220px] flex items-center justify-center z-30">
-				<div class="flex items-center justify-center">
-					<div class="grid grid-cols-2 grid-rows-2 gap-2">
-						<component
-							v-for="(icon, index) in smallIcons"
-							@mouseenter="handleOver(icon)"
-							:key="index"
-							:is="icon.component"
-							class="size-14 border-4 border-white rounded-md"
-						/>
-					</div>
-				</div>
-			</div>
+		<button
+			v-if="showChangeButton"
+			@click="currentComponentCircle = !currentComponentCircle"
+			class="p-2 border border-white text-accent rounded-lg absolute top-10 left-0 shadow-accent group hover:bg-accent transition-all"
+		>
+			<Icon name="material-symbols:change-circle-outline" class="size-10 group-hover:text-white" />
+		</button>
 
-			<!-- Medium circle -->
-			<div class="absolute inset-0 top-32 size-[350px] left-32 flex items-center justify-center">
-				<div class="">
-					<div class="absolute inset-0 z-20" :style="{ transform: `rotate(-${rotation}deg)` }">
-						<div
-							v-for="(icon, index) in mediumIcons"
-							@mouseenter="handleOver(icon)"
-							:key="index"
-							class="absolute size-16 bg-gray-200 rounded-full shadow-md flex items-center justify-center"
-							:style="{
-								top: '40%',
-								left: '40%',
-								transform: `rotate(${(360 / totalMediumIcons) * index}deg) translate(150px) rotate(${rotation}deg) rotate(-${(360 / totalMediumIcons) * index}deg)`,
-							}"
-						>
-							<component :is="icon.component" class="size-12" />
-						</div>
-					</div>
-				</div>
+		<Transition name="blur" mode="out-in">
+			<div v-if="currentComponentCircle" key="circle">
+				<StackCircle :smallIcons="smallIcons" :mediumIcons="mediumIcons" :largeIcons="largeIcons" />
 			</div>
-
-			<!-- Large circle -->
-			<div class="absolute inset-0 top-0 left-0 flex items-center justify-center">
-				<div class="absolute inset-0 size-[600px]" :style="{ transform: `rotate(${rotation}deg)` }">
-					<div
-						v-for="(icon, index) in largeIcons"
-						:key="index"
-						@mouseenter="handleOver(icon)"
-						class="absolute size-16 bg-white rounded-full shadow-md flex items-center justify-center"
-						:style="{
-							top: '45%',
-							left: '45%',
-							transform: `rotate(${(360 / totalLargeIcons) * index}deg) translate(280px) rotate(-${rotation}deg) rotate(-${(360 / totalLargeIcons) * index}deg)`,
-						}"
-					>
-						<component :is="icon.component" class="size-12" />
-					</div>
-				</div>
+			<div v-else key="list">
+				<StackList class="mt-24" :data="categorizedIcons" />
 			</div>
-		</div>
+		</Transition>
 	</div>
 </template>
+
+<style scoped>
+.blur-enter-active,
+.blur-leave-active {
+	transition:
+		opacity 0.2s ease,
+		filter 0.2s ease;
+}
+.blur-enter-from,
+.blur-leave-to {
+	opacity: 0;
+	filter: blur(10px);
+}
+</style>

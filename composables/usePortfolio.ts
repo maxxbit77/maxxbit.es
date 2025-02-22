@@ -23,7 +23,7 @@ export const usePortfolioInfo = () => {
 		nickName: '@maxxbit',
 		name: 'Maxi Roig',
 		occupation: 'Front-end UI developer',
-		slogan: 'Focused in interactions and design',
+		slogan: 'Focused on Interactions and Design',
 		image: '/profile.png',
 		socials: [
 			{
@@ -53,7 +53,7 @@ export const usePortfolioInfo = () => {
 			endsAt: '2024',
 			position: 'Front end Developer',
 			description:
-				'An online ticketing platform that allows event organizers to create, manage, and sell tickets for concerts, conferences, and other events. It includes real-time tracking, secure payments, and QR-based entry validation.',
+				'A ticketing platform that enables event organizers to create, and sell tickets for concerts, theater, and other live events. It features secure payment processing, real-time ticket availability, and interactive seat selection. The platform also offers event promotion tools and integration with major marketing channels.',
 			responsibilities: [
 				'Developed an internal ticketing platform.',
 				'Enhanced UX for ticket purchasing.',
@@ -73,7 +73,7 @@ export const usePortfolioInfo = () => {
 			endsAt: '2024',
 			position: 'Front end Developer',
 			description:
-				'A collaborative workspace and task management platform designed for remote teams. It features real-time messaging, task assignments, and file sharing to improve team efficiency and communication.',
+				'Platform designed to connect creators of newsletters. It enables users collaborate with other newsletters to grow together. By registering, creators can add their newsletters to the directory, find others with similar interests, and propose cross-promotions to expand their subscriber base.',
 			responsibilities: [
 				'Designed an intuitive UI.',
 				'Developed user profile system.',
@@ -110,7 +110,7 @@ export const usePortfolioInfo = () => {
 			endsAt: '2023',
 			position: 'Frontend Developer',
 			description:
-				'A content aggregation and discovery platform that curates trending articles, videos, and podcasts based on user interests. It integrates AI-powered recommendations and personalized content feeds.',
+				'A community platform that connects startup founders with early adopters. It allows creators to validate their ideas and receive valuable feedback before launching, while users can discover and influence new innovations from their early stages.',
 			responsibilities: [
 				"Enhanced the platform's user interface.",
 				'Algorithms for idea feasibility assessment.',
@@ -155,7 +155,7 @@ export const usePortfolioInfo = () => {
 			endsAt: 'Now',
 			position: '',
 			description:
-				'Personal finance management application that helps users track their bank accounts, cash, investments, and cryptocurrencies. It provides a clear overview of financial status with interactive charts and real-time market data.',
+				'Finance management application that helps users track their bank accounts, cash, investments, and cryptocurrencies. It will provide a clear overview of financial status with interactive charts and real-time market data.',
 			url: 'https://github.com/maxxbit77/finance-manager',
 			tags: [
 				'Bitcoin',
@@ -179,7 +179,7 @@ export const usePortfolioInfo = () => {
 			startAt: '2024',
 			endsAt: 'Now',
 			description:
-				'An app where users share their mood on a map using emotes. Post your feelings, explore global emotions in real-time, and connect through a shared emotional experience. 📍😊',
+				'An app where users share their mood on a map using emotes. Post your feelings, explore global emotions in real-time, and connect through a shared emotional experience.',
 			technologies: ['Vue.js', 'Vuex', 'REST API', 'SCSS'],
 			url: 'https://github.com/maxxbit77/Vibency-frontend-clone',
 			tags: ['Real-time Location', 'Emotions', 'Social', 'Map', 'Geolocation', 'Emotes', 'Mood', 'Feelings'],
