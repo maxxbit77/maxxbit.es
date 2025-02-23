@@ -65,7 +65,7 @@ export const usePortfolioInfo = () => {
 			// 	url: '/images/experience/mockup-beonWW.webp',
 			// 	alt: 'mockup Tickets seller',
 			// },
-			video: '/videos/beon.mp4',
+			video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275588/beon_kps6qr.mp4',
 		},
 		{
 			projectName: 'Squinbox',
@@ -86,7 +86,7 @@ export const usePortfolioInfo = () => {
 			// 	url: '/images/experience/mockup-sq.webp',
 			// 	alt: 'mockup Squinbox',
 			// },
-			video: '/videos/squinbox.mp4',
+			video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275596/squinbox_ruhxzv.mp4',
 		},
 		{
 			projectName: 'Rapid Launch',
@@ -104,7 +104,7 @@ export const usePortfolioInfo = () => {
 			url: 'https://rapidlaunch.it/',
 			tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'Radix', 'Shadcn', 'Vitest'],
 			// image: { url: '/images/experience/mockup-rl.webp', alt: 'mockup RapidLaunch' },
-			video: '/videos/rapid-launch.mp4',
+			video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275508/rapid-launch_ydnzab.mp4',
 		},
 		{
 			projectName: 'NFUT Cards',
@@ -130,7 +130,7 @@ export const usePortfolioInfo = () => {
 				'UI/UX',
 			],
 			// image: { url: '/images/experience/mockup-nfut.webp', alt: 'mockup NFUTCards' },
-			video: '/videos/nfut.mp4',
+			video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275664/nfut_w6ijfd.mp4',
 		},
 		{
 			projectName: 'Horizon Hub',
@@ -148,7 +148,7 @@ export const usePortfolioInfo = () => {
 			url: 'https://horizonhub.io/',
 			tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'axios', 'REST API'],
 			// image: { url: '/images/experience/mockup-hh.webp', alt: 'mockup HorizonHub' },
-			video: '/videos/horizonhub.mp4',
+			video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275520/horizonhub_dfam9g.mp4',
 		},
 	]
 
