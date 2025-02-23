@@ -31,7 +31,7 @@ const experienceData = computed(() => {
 			</div>
 			<div
 				@click="showAll = !showAll"
-				class="text-accent font-matrix text-end cursor-pointer mt-2 transition-all"
+				class="text-accent font-matrix text-end cursor-pointer mt-2 transition-all absolute right-0 z-20"
 			>
 				{{ showAll ? '<< Show less' : 'Show more >>' }}
 			</div>

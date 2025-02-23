@@ -61,10 +61,11 @@ export const usePortfolioInfo = () => {
 			],
 			url: 'https://beonworldwide.com/es',
 			tags: ['JS(ES6)', 'TypeScript', 'Vue 3', 'Nuxt 3', 'Tailwind 3', 'Vitest', 'Git', 'D3.js', 'REST API'],
-			image: {
-				url: '/images/experience/mockup-beonWW.png',
-				alt: 'mockup Tickets seller',
-			},
+			// image: {
+			// 	url: '/images/experience/mockup-beonWW.webp',
+			// 	alt: 'mockup Tickets seller',
+			// },
+			video: '/videos/beon.mp4',
 		},
 		{
 			projectName: 'Squinbox',
@@ -81,10 +82,11 @@ export const usePortfolioInfo = () => {
 			],
 			url: 'https://squinbox.com/',
 			tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'FormKit', 'Prisma', 'Pinia'],
-			image: {
-				url: '/images/experience/mockup-sq.jpg',
-				alt: 'mockup Squinbox',
-			},
+			// image: {
+			// 	url: '/images/experience/mockup-sq.webp',
+			// 	alt: 'mockup Squinbox',
+			// },
+			video: '/videos/squinbox.mp4',
 		},
 		{
 			projectName: 'Rapid Launch',
@@ -101,24 +103,8 @@ export const usePortfolioInfo = () => {
 			],
 			url: 'https://rapidlaunch.it/',
 			tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'Radix', 'Shadcn', 'Vitest'],
-			image: { url: '/images/experience/mockup-rl.jpg', alt: 'mockup RapidLaunch' },
-		},
-		{
-			projectName: 'Horizon Hub',
-			companyName: 'Mosaiqo S.L.',
-			startAt: '2022',
-			endsAt: '2023',
-			position: 'Frontend Developer',
-			description:
-				'A community platform that connects startup founders with early adopters. It allows creators to validate their ideas and receive valuable feedback before launching, while users can discover and influence new innovations from their early stages.',
-			responsibilities: [
-				"Enhanced the platform's user interface.",
-				'Algorithms for idea feasibility assessment.',
-				'Optimized the system for quick insights.',
-			],
-			url: 'https://horizonhub.io/',
-			tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'axios', 'REST API'],
-			image: { url: '/images/experience/mockup-hh.jpg', alt: 'mockup HorizonHub' },
+			// image: { url: '/images/experience/mockup-rl.webp', alt: 'mockup RapidLaunch' },
+			video: '/videos/rapid-launch.mp4',
 		},
 		{
 			projectName: 'NFUT Cards',
@@ -143,7 +129,26 @@ export const usePortfolioInfo = () => {
 				'FSE (Full Site Editing)',
 				'UI/UX',
 			],
-			image: { url: '/images/experience/mockup-nfut.jpg', alt: 'mockup NFUTCards' },
+			// image: { url: '/images/experience/mockup-nfut.webp', alt: 'mockup NFUTCards' },
+			video: '/videos/nfut.mp4',
+		},
+		{
+			projectName: 'Horizon Hub',
+			companyName: 'Mosaiqo S.L.',
+			startAt: '2022',
+			endsAt: '2023',
+			position: 'Frontend Developer',
+			description:
+				'A community platform that connects startup founders with early adopters. It allows creators to validate their ideas and receive valuable feedback before launching, while users can discover and influence new innovations from their early stages.',
+			responsibilities: [
+				"Enhanced the platform's user interface.",
+				'Algorithms for idea feasibility assessment.',
+				'Optimized the system for quick insights.',
+			],
+			url: 'https://horizonhub.io/',
+			tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'axios', 'REST API'],
+			// image: { url: '/images/experience/mockup-hh.webp', alt: 'mockup HorizonHub' },
+			video: '/videos/horizonhub.mp4',
 		},
 	]
 

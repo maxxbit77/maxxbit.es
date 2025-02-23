@@ -13,23 +13,21 @@ const props = defineProps({
 	responsibilities: Array,
 	url: String,
 	tags: Array,
+	video: String,
 })
 </script>
 
 <template>
 	<ClientOnly>
-		<div class="coin-tile relative h-full rounded-lg bg-slate-950 overflow-hidden group p-4">
+		<div class="coin-tile relative h-full rounded-lg bg-slate-950 overflow-hidden group p-2">
 			<span class="text-gray-500 flex justify-end text-sm font-matrix"> {{ startAt }} - {{ endsAt }} </span>
 			<div>
-				<div class="relative z-10">
+				<div class="relative z-10 h-64">
 					<a :href="url" target="_blank">
-						<img
-							v-if="image"
-							loading="lazy"
-							:src="image.url"
-							class="rounded-lg transition-all duration-300"
-							:alt="image.alt"
-						/>
+						<img v-if="image" loading="lazy" :src="image.url" class="h-full rounded-lg" :alt="image.alt" />
+						<div v-else>
+							<Video :src="video" class="rounded-lg" />
+						</div>
 					</a>
 				</div>
 				<div class="flex flex-col space-y-4 mt-2">
