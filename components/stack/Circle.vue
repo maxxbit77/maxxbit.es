@@ -9,10 +9,9 @@ const props = defineProps({
 
 const totalMediumIcons = props.mediumIcons.length
 const totalLargeIcons = props.largeIcons.length
-const iconName = ref('↓ Pick a tech ↓')
+const iconName = ref('')
 const iconSkill = ref('')
 const rotation = ref(0)
-const currentComponentCircle = ref(true)
 
 const handleScroll = () => {
 	rotation.value = window.scrollY * 0.1
@@ -32,7 +31,7 @@ function handleOver(icon) {
 }
 
 function handleOut() {
-	setIconName('↓ Pick a tech ↓')
+	setIconName('')
 	setIconSkill('')
 }
 

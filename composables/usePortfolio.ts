@@ -50,7 +50,7 @@ export const usePortfolioInfo = () => {
 			projectName: 'BeKultura',
 			companyName: 'Beon WorldWide',
 			startAt: '2024',
-			endsAt: '2024',
+			endsAt: '2025',
 			position: 'Front end Developer',
 			description:
 				'A ticketing platform that enables event organizers to create, and sell tickets for concerts, theater, and other live events. It features secure payment processing, real-time ticket availability, and interactive seat selection. The platform also offers event promotion tools and integration with major marketing channels.',
@@ -95,11 +95,12 @@ export const usePortfolioInfo = () => {
 			endsAt: '2023',
 			position: 'Front end Developer',
 			description:
-				'A startup launch assistant that streamlines the process of creating and deploying new businesses. It provides tools for idea validation, project management, and automated website deployment to accelerate go-to-market strategies.',
+				'A startup launch assistant that streamlines the process of creating and deploying new businesses. It provides tools for easy features integrations, project management, and automated website deployment to accelerate go-to-market strategies.',
 			responsibilities: [
 				'Developed a Vue 3 & Nuxt-based boilerplate.',
 				'Designed setup for non-developers.',
 				'Scalability and maintainability.',
+				'Integration of multiple functionalities.',
 			],
 			url: 'https://rapidlaunch.it/',
 			tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'Radix', 'Shadcn', 'Vitest'],
@@ -118,17 +119,11 @@ export const usePortfolioInfo = () => {
 				'Designed the website layout and structure.',
 				'Implemented responsive design.',
 				'Optimized website speed and performance.',
+				'Drag-and-drop creation platform.',
+				'Web 3 wallets user system.',
 			],
 			url: 'https://twitter.com/nfutcards',
-			tags: [
-				'HTML5',
-				'Css3',
-				'Block Editor',
-				'Elementor',
-				'Theme Customization',
-				'FSE (Full Site Editing)',
-				'UI/UX',
-			],
+			tags: ['HTML5', 'Css3', 'Vue 3', 'Nuxt 3', 'Web sockets', 'Web 3', 'UI/UX'],
 			// image: { url: '/images/experience/mockup-nfut.webp', alt: 'mockup NFUTCards' },
 			video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275664/nfut_w6ijfd.mp4',
 		},
@@ -151,7 +146,6 @@ export const usePortfolioInfo = () => {
 			video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275520/horizonhub_dfam9g.mp4',
 		},
 	]
-
 	const projects = [
 		{
 			projectName: 'FinancesFlow',

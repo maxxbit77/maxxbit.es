@@ -19,35 +19,39 @@ const props = defineProps({
 
 <template>
 	<ClientOnly>
-		<div class="coin-tile relative h-full rounded-lg bg-slate-950 overflow-hidden group p-2">
+		<div class="coin-tile relative h-full flex flex-col rounded-lg bg-slate-950 overflow-hidden group p-2">
 			<span class="text-gray-500 flex justify-end text-sm font-matrix"> {{ startAt }} - {{ endsAt }} </span>
-			<div>
-				<div class="relative z-10 h-64">
-					<a :href="url" target="_blank">
-						<img v-if="image" loading="lazy" :src="image.url" class="h-full rounded-lg" :alt="image.alt" />
-						<div v-else>
-							<Video :src="video" class="rounded-lg" />
-						</div>
-					</a>
-				</div>
-				<div class="flex flex-col space-y-4 mt-2">
-					<div>
-						<div class="flex justify-between items-end">
-							<span class="block text-xl font-matrix text-accent font-semibold">
-								{{ projectName }}
-							</span>
-							<h3 class="text-gray-500 text-sm font-matrix">
-								{{ companyName }}
-							</h3>
-						</div>
+			<div class="relative z-10 h-44">
+				<a :href="url" target="_blank">
+					<img v-if="image" loading="lazy" :src="image.url" class="h-full rounded-lg" :alt="image.alt" />
+					<div v-else>
+						<Video :src="video" class="rounded-lg" />
 					</div>
+				</a>
+			</div>
 
-					<p class="text-gray-300 text-sm">
-						{{ description }}
-					</p>
+			<!-- Contenedor ajustado -->
+			<div class="flex flex-col space-y-3 flex-1 mt-2">
+				<div>
+					<div class="flex justify-between items-end">
+						<span class="block text-xl font-matrix text-accent font-semibold">
+							{{ projectName }}
+						</span>
+						<h3 class="text-gray-500 text-sm font-matrix">
+							{{ companyName }}
+						</h3>
+					</div>
+				</div>
 
+				<!-- Este párrafo ocupa el espacio restante -->
+				<p class="text-gray-300 text-sm flex-1">
+					{{ description }}
+				</p>
+
+				<!-- Último div pegado abajo -->
+				<div class="mt-auto">
 					<div class="text-white text-xs">
-						<CollapsableText title="Responsabilities" :items="responsibilities" />
+						<CollapsableText title="Responsibilities" :items="responsibilities" />
 					</div>
 
 					<div>

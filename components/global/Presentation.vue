@@ -17,7 +17,7 @@ const { name, occupation, slogan, nickName, presentation } = myInfo
 				{{ slogan }}
 			</h2>
 		</div>
-		<p class="text-secondary-400 text-4xl uppercase font-matrix"></p>
+
 		<p class="text-gray-400">
 			I build fast, intuitive apps that feel like a natural extension of your mind, using thoughtful motion design
 			to create fluid, seamless interfaces.
