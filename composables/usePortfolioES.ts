@@ -58,6 +58,8 @@ export const usePortfolioES = () => {
 			more: 'Mostrar más >>',
 			less: '<< Mostrar menos',
 		},
+		responsabilities: 'Responsabilidades',
+		tech: 'Tecnologías',
 		list: [
 			{
 				projectName: 'BeKultura',
@@ -68,12 +70,16 @@ export const usePortfolioES = () => {
 				description:
 					'Una plataforma de venta de entradas que permite a los organizadores de eventos crear y vender boletos para conciertos, teatro y otros eventos en vivo. Cuenta con procesamiento de pagos seguro, disponibilidad de entradas en tiempo real y selección interactiva de asientos. La plataforma también ofrece herramientas de promoción de eventos e integración con los principales canales de marketing.',
 				responsibilities: [
-					'Desarrollé una plataforma interna de venta de entradas.',
-					'Mejoré la experiencia de usuario en la compra de boletos.',
-					'Desarrollé herramientas para la gestión de eventos.',
+					'Desarrollo de una plataforma interna de venta de entradas.',
+					'Mejora enla experiencia de usuario en la compra de tickets.',
+					'Desarrollo de herramientas para la gestión de eventos.',
 				],
 				url: 'https://beonworldwide.com/es',
 				tags: ['JS(ES6)', 'TypeScript', 'Vue 3', 'Nuxt 3', 'Tailwind 3', 'Vitest', 'Git', 'D3.js', 'REST API'],
+				image: {
+					url: '/images/experience/mockup-beonWW.webp',
+					alt: 'mockup Tickets seller',
+				},
 				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275588/beon_kps6qr.mp4',
 			},
 			{
@@ -85,12 +91,16 @@ export const usePortfolioES = () => {
 				description:
 					'Plataforma diseñada para conectar creadores de newsletters. Permite a los usuarios colaborar con otros boletines para crecer juntos. Al registrarse, los creadores pueden agregar sus newsletters al directorio, encontrar otros con intereses similares y proponer promociones cruzadas para expandir su base de suscriptores.',
 				responsibilities: [
-					'Diseñé una interfaz de usuario intuitiva.',
-					'Desarrollé un sistema de perfiles de usuario.',
-					'Mejoré el rendimiento y la velocidad de carga.',
+					'Diseño de interfaz de usuario intuitiva.',
+					'Desarrollo de sistema de perfiles de usuario.',
+					'Mejoras en el rendimiento y la velocidad de carga.',
 				],
 				url: 'https://squinbox.com/',
 				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'FormKit', 'Prisma', 'Pinia'],
+				image: {
+					url: '/images/experience/mockup-sq.webp',
+					alt: 'mockup Squinbox',
+				},
 				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275596/squinbox_ruhxzv.mp4',
 			},
 			{
@@ -102,13 +112,14 @@ export const usePortfolioES = () => {
 				description:
 					'Asistente de lanzamiento de startups que agiliza el proceso de creación y despliegue de nuevos negocios. Proporciona herramientas para integraciones de características, gestión de proyectos y despliegue automatizado de sitios web para acelerar la estrategia de salida al mercado.',
 				responsibilities: [
-					'Desarrollé un boilerplate basado en Vue 3 y Nuxt.',
-					'Diseñé una configuración fácil para no desarrolladores.',
-					'Mejoré la escalabilidad y mantenibilidad.',
-					'Integración de múltiples funcionalidades.',
+					'Desarrollo de un boilerplate basado en Vue 3 y Nuxt.',
+					'Diseño una configuración fácil para no desarrolladores.',
+					'Mejoras constantes en la escalabilidad y mantenibilidad.',
+					'Integraciónes de múltiples funcionalidades y librerías.',
 				],
 				url: 'https://rapidlaunch.it/',
 				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'Radix', 'Shadcn', 'Vitest'],
+				image: { url: '/images/experience/mockup-rl.webp', alt: 'mockup RapidLaunch' },
 				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275508/rapid-launch_ydnzab.mp4',
 			},
 			{
@@ -120,10 +131,9 @@ export const usePortfolioES = () => {
 				description:
 					'Un juego de cartas coleccionables digitales basado en jugadores de fútbol reales. Los usuarios pueden coleccionar, intercambiar y competir con sus cartas de jugadores NFT, con estadísticas dinámicas que se actualizan en función del rendimiento real en los partidos.',
 				responsibilities: [
-					'Diseñé la estructura y el diseño del sitio web.',
-					'Implementé un diseño responsive.',
-					'Optimizé la velocidad y el rendimiento del sitio web.',
-					'Desarrollé una plataforma de creación con arrastrar y soltar.',
+					'Desarrolo de estructura y el diseño del sitio web.',
+					'Diseños de cartas y animaciónes',
+					'Desarrollo de plataforma de creación con arrastrar y soltar.',
 					'Sistema de usuarios con billeteras Web3.',
 				],
 				url: 'https://twitter.com/nfutcards',
@@ -139,12 +149,13 @@ export const usePortfolioES = () => {
 				description:
 					'Una plataforma comunitaria que conecta fundadores de startups con early adopters. Permite a los creadores validar sus ideas y recibir comentarios valiosos antes del lanzamiento, mientras que los usuarios pueden descubrir e influir en nuevas innovaciones desde sus primeras etapas.',
 				responsibilities: [
-					'Mejoré la interfaz de usuario de la plataforma.',
-					'Desarrollé algoritmos para evaluar la viabilidad de ideas.',
-					'Optimizé el sistema para obtener información rápida.',
+					'Mejora en la interfaz de usuario de la plataforma.',
+					'Desarrollo de algoritmos para evaluar la viabilidad de ideas.',
+					'Optimización en el sistema para obtener información rápida.',
 				],
 				url: 'https://horizonhub.io/',
 				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'axios', 'REST API'],
+				image: { url: '/images/experience/mockup-nfut.webp', alt: 'mockup NFUTCards' },
 				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275520/horizonhub_dfam9g.mp4',
 			},
 		],
