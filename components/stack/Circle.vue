@@ -5,14 +5,14 @@ const props = defineProps({
 	smallIcons: Array,
 	mediumIcons: Array,
 	largeIcons: Array,
+	skillTxt: String,
 })
 
 const totalMediumIcons = props.mediumIcons.length
 const totalLargeIcons = props.largeIcons.length
-const iconName = ref('↓ Pick a tech ↓')
+const iconName = ref('')
 const iconSkill = ref('')
 const rotation = ref(0)
-const currentComponentCircle = ref(true)
 
 const handleScroll = () => {
 	rotation.value = window.scrollY * 0.1
@@ -32,7 +32,7 @@ function handleOver(icon) {
 }
 
 function handleOut() {
-	setIconName('↓ Pick a tech ↓')
+	setIconName('')
 	setIconSkill('')
 }
 
@@ -59,7 +59,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 					class="flex justify-between items-center font-matrix text-gray-400 text-xs"
 				>
 					<span>0%</span>
-					<p>Skill level</p>
+					<p>{{ skillTxt }}</p>
 					<span>{{ iconSkill }}%</span>
 				</div>
 			</div>

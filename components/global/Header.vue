@@ -1,4 +1,8 @@
 <script setup>
+const props = defineProps({
+	data: Object,
+})
+
 import { TresCanvas } from '@tresjs/core'
 import Cube from '~/components/animations/Cube.vue'
 </script>
@@ -9,8 +13,8 @@ import Cube from '~/components/animations/Cube.vue'
 		</div>
 		<header class="grid grid-cols-1 md:grid-cols-2 md:gap-x-2 absolute top-14">
 			<div class="h-[470px] text-left">
-				<Presentation />
-				<Socials />
+				<Presentation :myInfo="data" />
+				<Socials :myInfo="data" />
 			</div>
 			<!-- <div>
 				<TresCanvas shadows alpha>

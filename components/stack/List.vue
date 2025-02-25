@@ -1,6 +1,7 @@
 <script setup>
 const props = defineProps({
 	data: Object,
+	skillTxt: String,
 })
 
 let categories = { ...props.data }
@@ -72,7 +73,7 @@ onMounted(() => {
 						<p class="text-matrix text-center font-matrix">{{ icon.name }}</p>
 						<component :is="icon.component" class="size-12 mx-auto" />
 						<div class="flex justify-between">
-							<span class="text-xs text-gray-400">Skill</span>
+							<span class="text-xs text-gray-400">{{ skillTxt }}</span>
 							<span class="text-xs text-gray-400">{{ icon.skill }}%</span>
 						</div>
 						<ProgressRoot :value="icon.skill" class="h-1 w-full bg-gray-700 rounded">

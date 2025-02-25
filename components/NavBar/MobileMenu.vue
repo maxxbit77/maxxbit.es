@@ -1,7 +1,7 @@
 <script setup>
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 
-const { navBar } = usePortfolioInfo()
+const { navBar } = usePortfolioEN()
 const { items, logo } = navBar
 const { isMobileMenuOpen, close } = useMobileMenu()
 </script>

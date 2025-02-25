@@ -1,7 +1,10 @@
 <script setup>
-const { myInfo } = usePortfolioInfo()
-const socials = myInfo.socials
-const contact = myInfo.contact
+const props = defineProps({
+	myInfo: Object,
+})
+
+const socials = props.myInfo.socials
+const contact = props.myInfo.contact
 
 const textToCopy = ref(contact.email)
 const copied = ref(false)
@@ -9,7 +12,7 @@ const copied = ref(false)
 const email = {
 	myEmail: contact.email,
 	subject: 'Inquiry about your portfolio',
-	body: 'Hello Maxiel, I came across your portfolio and I am very interested in your work. Let’s connect!',
+	body: 'Hello Maxi, I came across your portfolio and I am very interested in your work. Let’s connect!',
 }
 
 const openWhatsApp = () => {
@@ -22,14 +25,15 @@ const copyText = () => {
 	copied.value === false ? (copied.value = true) : (copied.value = false)
 }
 
-const buttonDescription = ref('Send me an email')
+const buttonDescription = ref(contact.defaultDescription)
 </script>
+
 <template>
 	<div class="mt-6 flex flex-col space-y-10 justify-center w-full">
 		<div class="space-x-2 flex items-end transition-all">
 			<button
-				@mouseenter="buttonDescription = 'Copy email to clipboard'"
-				@mouseleave="buttonDescription = 'Send me an email'"
+				@mouseenter="buttonDescription = contact.copyEmail"
+				@mouseleave="buttonDescription = contact.sendEmail"
 				@click="copyText"
 				class="group relative transition-all duration-300 ease-in border border-gray-600 hover:border-matrix rounded-xl p-2"
 			>
@@ -40,8 +44,8 @@ const buttonDescription = ref('Send me an email')
 			</button>
 
 			<button
-				@mouseenter="buttonDescription = 'Send Email'"
-				@mouseleave="buttonDescription = 'Send me an email'"
+				@mouseenter="buttonDescription = contact.sendEmail"
+				@mouseleave="buttonDescription = contact.defaultDescription"
 				class="group relative transition-all duration-300 ease-in border border-gray-600 hover:border-matrix rounded-xl p-2"
 			>
 				<a
@@ -56,8 +60,8 @@ const buttonDescription = ref('Send me an email')
 			</button>
 
 			<button
-				@mouseenter="buttonDescription = 'WhatsApp chat'"
-				@mouseleave="buttonDescription = 'Send me an email'"
+				@mouseenter="buttonDescription = contact.whatsapp"
+				@mouseleave="buttonDescription = contact.defaultDescription"
 				@click="openWhatsApp"
 				class="group relative transition-all duration-300 ease-in border border-gray-600 hover:border-matrix rounded-xl p-2"
 			>
@@ -68,14 +72,17 @@ const buttonDescription = ref('Send me an email')
 			</button>
 
 			<div>
-				<div class="text-accent font-matrix uppercase text-xl">Want to chat?</div>
-				<div class="text-sm" :class="buttonDescription === 'Send me an email' ? 'text-gray-500' : 'text-white'">
+				<div class="text-accent font-matrix uppercase text-xl">{{ contact.wantToChat }}</div>
+				<div
+					class="text-sm"
+					:class="buttonDescription === contact.defaultDescription ? 'text-gray-500' : 'text-white'"
+				>
 					{{ buttonDescription }}
 				</div>
 			</div>
 		</div>
 		<div class="flex flex-col">
-			<h3 class="text-2xl text-accent font-matrix uppercase">STALK ME HERE 👀</h3>
+			<h3 class="text-2xl text-accent font-matrix uppercase">{{ contact.stalkMe }}</h3>
 			<ul class="flex items-center space-x-4 text-md">
 				<li v-for="(social, index) in socials" :key="index">
 					<div>
@@ -86,7 +93,7 @@ const buttonDescription = ref('Send me an email')
 				</li>
 				<li>
 					<a href="/CV-Maxi Roig-2025-MAR-EN.pdf" download aria-label="Download CV">
-						<EffectUnderscore> Read CV </EffectUnderscore>
+						<EffectUnderscore> {{ contact.readCV }} </EffectUnderscore>
 					</a>
 				</li>
 			</ul>

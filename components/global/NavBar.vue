@@ -1,18 +1,21 @@
 <script setup>
-const { navBar } = usePortfolioInfo()
-const { items, logo, userLogo } = navBar
+const props = defineProps({
+	data: Object,
+})
 </script>
 
 <template>
 	<div>
-		<div class="w-full fixed top-0 z-10 bg-slate-800">
-			<div class="flex justify-between max-w-5xl mx-auto px-4">
-				<NavBarBrand />
-				<NavBarMenu />
-				<NavBarUserAvatar />
-				<NavBarMobileMenuButton />
-			</div>
-			<NavBarMobileMenu />
+		<div class="flex justify-between items-center">
+			<NavBarBrand />
+			<ul class="text-gray-500 hidden lg:flex justify-end items-center gap-x-6">
+				<li v-for="(item, index) in data.items" :key="index" class="hover:text-matrix-300">
+					<NuxtLink :to="item.url">
+						{{ item.text }}
+					</NuxtLink>
+				</li>
+			</ul>
+			<LangSwitch />
 		</div>
 	</div>
 </template>

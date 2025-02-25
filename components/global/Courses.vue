@@ -1,15 +1,15 @@
 <script setup>
 const props = defineProps({
-	data: Array,
+	data: Object,
 })
-const duplicatedItems = computed(() => [...props.data, ...props.data, ...props.data])
+const duplicatedItems = computed(() => [...props.data.list, ...props.data.list, ...props.data.list])
 
 const carousel = ref(null)
 </script>
 <template>
 	<div class="relative h-[600px] overflow-x-hidden w-full">
 		<div class="flex justify-center items-center space-x-1">
-			<TitleLine>Level Up Academy 🏆</TitleLine>
+			<TitleLine>{{ data.title }}</TitleLine>
 		</div>
 
 		<SvgGradientMatrixCircle class="absolute z-10 top-28 left-1/2 w-full h-[300px] blur-2xl -translate-x-1/2" />

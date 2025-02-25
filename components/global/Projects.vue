@@ -1,5 +1,5 @@
 <script setup>
-const data = computed(() => usePortfolioInfo().projects)
+const data = computed(() => usePortfolioEN().projects)
 </script>
 
 <template>

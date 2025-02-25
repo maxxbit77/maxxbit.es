@@ -5,7 +5,7 @@ const props = defineProps({
 	id: String,
 })
 
-const data = computed(() => usePortfolioInfo()?.[props.id] || null)
+const data = computed(() => usePortfolioEN()?.[props.id] || null)
 
 const activeIndex = ref(null)
 const openImage = ref(null)
