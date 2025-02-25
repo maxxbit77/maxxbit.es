@@ -1,6 +1,9 @@
 <script setup>
-const { myInfo } = usePortfolioInfo()
-const { name, occupation, slogan, nickName, presentation } = myInfo
+const props = defineProps({
+	myInfo: Object,
+})
+
+const { name, occupation, slogan, nickName, presentation } = props.myInfo
 </script>
 
 <template>
@@ -19,13 +22,12 @@ const { name, occupation, slogan, nickName, presentation } = myInfo
 		</div>
 
 		<p class="text-gray-400">
-			I build fast, intuitive apps that feel like a natural extension of your mind, using thoughtful motion design
-			to create fluid, seamless interfaces.
+			{{ presentation.firstParagraph }}
 		</p>
 		<p class="text-gray-400">
-			<span class="text-white font-bold">I bridge the gap between design and engineering</span>
-			, ensuring your product gets the extra attention to detail it needs to
-			<span class="text-white font-bold">stand out from competitors. 🚀</span>
+			<span class="text-white font-bold">{{ presentation.secondParagraphhighlighted }}</span>
+			{{ presentation.thirdParagraph }}
+			<span class="text-white font-bold">{{ presentation.thirdParagraphhighlighted }}</span>
 		</p>
 	</div>
 </template>

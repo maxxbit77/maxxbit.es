@@ -1,5 +1,15 @@
-export const usePortfolioInfo = () => {
-	const navBar = {
+
+	navBar = {
+		items: [
+			{ text: 'Experience', url: '/#experience' },
+			{ text: 'Projects', url: '/#projects' },
+			{ text: 'Stack', url: '/#stack' },
+			{ text: 'Studies', url: '/#studies' },
+		],
+		logo: '/brand/logo-vertical.png',
+		userLogo: '/brand/only-logo-nobg.png',
+	}
+	footer = {
 		items: [
 			{ text: 'About', url: '/' },
 			{ text: 'Experience', url: '/#experience' },
@@ -9,17 +19,7 @@ export const usePortfolioInfo = () => {
 		logo: '/brand/logo-vertical.png',
 		userLogo: '/brand/only-logo-nobg.png',
 	}
-	const footer = {
-		items: [
-			{ text: 'About', url: '/' },
-			{ text: 'Experience', url: '/#experience' },
-			{ text: 'Projects', url: '/#projects' },
-			{ text: 'Studies', url: '/#studies' },
-		],
-		logo: '/brand/logo-vertical.png',
-		userLogo: '/brand/only-logo-nobg.png',
-	}
-	const myInfo = {
+	myInfo = {
 		nickName: '@maxxbit',
 		name: 'Maxi Roig',
 		occupation: 'Front-end UI developer',
@@ -45,7 +45,7 @@ export const usePortfolioInfo = () => {
 			email: 'maxielcade04@gmail.com',
 		},
 	}
-	const experience = [
+	experience = [
 		{
 			projectName: 'BeKultura',
 			companyName: 'Beon WorldWide',
@@ -146,7 +146,7 @@ export const usePortfolioInfo = () => {
 			video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275520/horizonhub_dfam9g.mp4',
 		},
 	]
-	const projects = [
+	projects = [
 		{
 			projectName: 'FinancesFlow',
 			companyName: 'Project',
@@ -184,7 +184,7 @@ export const usePortfolioInfo = () => {
 			tags: ['Real-time Location', 'Emotions', 'Social', 'Map', 'Geolocation', 'Emotes', 'Mood', 'Feelings'],
 		},
 	]
-	const courses = [
+	courses = [
 		{
 			courseName: 'React',
 			author: 'Maximilian Schwarzmuller',
@@ -286,12 +286,4 @@ export const usePortfolioInfo = () => {
 		},
 	]
 
-	return {
-		navBar,
-		myInfo,
-		experience,
-		projects,
-		courses,
-		footer,
-	}
 }

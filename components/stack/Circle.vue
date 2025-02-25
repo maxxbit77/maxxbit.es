@@ -5,6 +5,7 @@ const props = defineProps({
 	smallIcons: Array,
 	mediumIcons: Array,
 	largeIcons: Array,
+	skillTxt: String,
 })
 
 const totalMediumIcons = props.mediumIcons.length
@@ -58,7 +59,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 					class="flex justify-between items-center font-matrix text-gray-400 text-xs"
 				>
 					<span>0%</span>
-					<p>Skill level</p>
+					<p>{{ skillTxt }}</p>
 					<span>{{ iconSkill }}%</span>
 				</div>
 			</div>

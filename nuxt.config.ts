@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: ['~/assets/css/tailwind.css'],
-	modules: ['@nuxt/image', 'nuxt-icon', '@tresjs/nuxt', 'radix-vue/nuxt'],
+	modules: ['@nuxt/image', 'nuxt-icon', '@tresjs/nuxt', 'radix-vue/nuxt', '@nuxtjs/color-mode', '@nuxtjs/i18n'],
 
 	// @ts-ignore
 	assets: {
@@ -11,6 +11,14 @@ export default defineNuxtConfig({
 
 	imports: {
 		autoImport: true,
+	},
+
+	i18n: {
+		locales: [
+			{ code: 'en', language: 'en-US' },
+			{ code: 'es', language: 'es-ES' },
+		],
+		defaultLocale: 'en',
 	},
 
 	postcss: {

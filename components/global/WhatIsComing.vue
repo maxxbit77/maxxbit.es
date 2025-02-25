@@ -1,16 +1,18 @@
 <script setup>
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 
-const data = computed(() => usePortfolioInfo().projects)
+const props = defineProps({
+	data: Object,
+})
 
-const finances = computed(() => data.value[0])
-const vibency = computed(() => data.value[1])
+const project1 = computed(() => props.data.list[0])
+const project2 = computed(() => props.data.list[1])
 </script>
 
 <template>
 	<div class="relative h-[800px] sm:h-[600px]">
 		<section>
-			<TitleLine>What's Cooking? ⏲</TitleLine>
+			<TitleLine>{{ data.title }}</TitleLine>
 			<div class="hidden md:block">
 				<div class="rainbow absolute top-[160px] z-10 translate-x-50 md:translate-x-52" />
 				<div class="bg-slate-950 h-12 w-48 absolute top-[225px] right-16" />
@@ -20,19 +22,17 @@ const vibency = computed(() => data.value[1])
 				<div class="grid grid-col-1 sm:grid-cols-2 h-[300px] mt-12 sm:mt-0 items-center">
 					<div class="col-span-1 group">
 						<div class="w-full bg-black shadow-lg shadow-matrix p-6 rounded-lg">
-							<a :href="vibency.url" target="_blank">
+							<a :href="project2.url" target="_blank">
 								<div class="flex flex-col justify-start h-full relative cursor-pointer">
 									<div class="flex justify-between items-center">
 										<div class="flex justify-start items-end">
-											<h4
-												class="text-2xl font-matrix text-matrix drop-shadow-[0_0_10px_rgba(27,249,171,0.8)]"
-											>
-												{{ vibency.projectName }}
+											<h4 class="text-2xl font-matrix text-matrix">
+												{{ project2.projectName }}
 											</h4>
 										</div>
-										<span class="border px-2 text-xs rounded-md">Soon</span>
+										<span class="border px-2 text-xs rounded-md">{{ data.soon }}</span>
 									</div>
-									<div class="text-sm mt-3">{{ vibency.description }}</div>
+									<div class="text-sm mt-3">{{ project2.description }}</div>
 								</div>
 								<div class="text-end">
 									<Icon
@@ -64,19 +64,17 @@ const vibency = computed(() => data.value[1])
 					<div
 						class="w-full bg-black shadow-lg shadow-accent p-4 rounded-lg flex justify-center items-center group"
 					>
-						<a :href="finances.url" target="_blank">
+						<a :href="project1.url" target="_blank">
 							<div class="flex flex-col justify-start h-full relative cursor-pointer">
 								<div class="flex justify-between items-center">
 									<div class="flex justify-start items-end">
-										<h4
-											class="text-2xl font-matrix text-accent drop-shadow-[0_0_10px_rgba(27,249,171,0.8)]"
-										>
-											{{ finances.projectName }}
+										<h4 class="text-2xl font-matrix text-accent">
+											{{ project1.projectName }}
 										</h4>
 									</div>
-									<span class="border px-2 text-xs rounded-md">Soon</span>
+									<span class="border px-2 text-xs rounded-md">{{ data.soon }}</span>
 								</div>
-								<div class="text-sm mt-3">{{ finances.description }}</div>
+								<div class="text-sm mt-3">{{ project1.description }}</div>
 							</div>
 							<div class="text-end">
 								<Icon

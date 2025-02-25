@@ -1,4 +1,8 @@
 <script setup>
+const props = defineProps({
+	data: Object,
+})
+
 import {
 	LogosBootstrap,
 	LogosJs,
@@ -131,7 +135,7 @@ onMounted(() => {
 			class="absolute top-0 -left-24 z-0 w-[200px] h-[200px] bg-gradient-to-r from-accent to-transparent blur-3xl opacity-30 transform"
 		/>
 
-		<TitleLine>The Tech Shelf 📚</TitleLine>
+		<TitleLine>{{ data.title }}</TitleLine>
 
 		<button
 			v-if="showChangeButton"
@@ -148,10 +152,15 @@ onMounted(() => {
 
 		<Transition name="blur" mode="out-in">
 			<div v-if="showCircleComponent" key="circle">
-				<StackCircle :smallIcons="smallIcons" :mediumIcons="mediumIcons" :largeIcons="largeIcons" />
+				<StackCircle
+					:smallIcons="smallIcons"
+					:mediumIcons="mediumIcons"
+					:largeIcons="largeIcons"
+					:skillTxt="data.skill"
+				/>
 			</div>
 			<div v-else key="list">
-				<StackList class="mt-12" :data="categorizedIcons" />
+				<StackList class="mt-12" :data="categorizedIcons" :skillTxt="data.skill" />
 			</div>
 		</Transition>
 	</div>
