@@ -1,5 +1,4 @@
 <script setup>
-import { useI18n } from '#i18n'
 const props = defineProps({
 	projectName: String,
 	image: {
@@ -16,10 +15,6 @@ const props = defineProps({
 	tags: Array,
 	video: String,
 })
-
-const { locale } = useI18n()
-const lang = locale.value
-console.log('local', locale.value)
 </script>
 
 <template>
@@ -28,8 +23,9 @@ console.log('local', locale.value)
 			<span class="text-gray-500 flex justify-end text-sm font-matrix"> {{ startAt }} - {{ endsAt }} </span>
 			<div class="relative z-10 h-44">
 				<a :href="url" target="_blank">
-					<div>
-						<Video :image="image" :src="video" class="rounded-lg" />
+					<img v-if="image" loading="lazy" :src="image.url" class="h-full rounded-lg" :alt="image.alt" />
+					<div v-else>
+						<Video :src="video" class="rounded-lg" />
 					</div>
 				</a>
 			</div>
@@ -55,14 +51,11 @@ console.log('local', locale.value)
 				<!-- Último div pegado abajo -->
 				<div class="mt-auto">
 					<div class="text-white text-xs">
-						<CollapsableText
-							:title="lang === 'es' ? 'Responsabilidades' : 'Responsabilities'"
-							:items="responsibilities"
-						/>
+						<CollapsableText title="Responsibilities" :items="responsibilities" />
 					</div>
 
 					<div>
-						<CollapsableTags :title="lang === 'es' ? 'Tecnologías' : 'Technologies'" :items="tags" />
+						<CollapsableTags title="Technologies" :items="tags" />
 					</div>
 				</div>
 			</div>
