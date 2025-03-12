@@ -92,7 +92,7 @@ const buttonDescription = ref(contact.defaultDescription)
 					</div>
 				</li>
 				<li>
-					<a href="/CV-Maxi Roig-2025-MAR-EN.pdf" download aria-label="Download CV">
+					<a href="/CV-Maxi Roig-2025-EN.pdf" download aria-label="Download CV">
 						<EffectUnderscore> {{ contact.readCV }} </EffectUnderscore>
 					</a>
 				</li>
