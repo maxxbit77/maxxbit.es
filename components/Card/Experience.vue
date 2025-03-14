@@ -1,4 +1,5 @@
 <script setup>
+import { useI18n, useSwitchLocalePath } from '#i18n'
 const props = defineProps({
 	projectName: String,
 	image: {
@@ -22,7 +23,9 @@ const lang = locale.value
 
 <template>
 	<ClientOnly>
-		<div class="coin-tile relative h-full flex flex-col rounded-lg bg-slate-950 overflow-hidden group p-2">
+		<div
+			class="coin-tile relative h-full flex flex-col rounded-lg bg-slate-950 overflow-hidden group p-2 shadow-sm shadow-accent"
+		>
 			<span class="text-gray-500 flex justify-end text-sm font-matrix"> {{ startAt }} - {{ endsAt }} </span>
 			<div class="relative z-10 h-44">
 				<a :href="url" target="_blank">
@@ -33,7 +36,6 @@ const lang = locale.value
 				</a>
 			</div>
 
-			<!-- Contenedor ajustado -->
 			<div class="flex flex-col space-y-3 flex-1 mt-2">
 				<div>
 					<div class="flex justify-between items-end">
@@ -46,12 +48,10 @@ const lang = locale.value
 					</div>
 				</div>
 
-				<!-- Este párrafo ocupa el espacio restante -->
 				<p class="text-gray-300 text-sm">
 					{{ description }}
 				</p>
 
-				<!-- Último div pegado abajo -->
 				<div class="flex-1">
 					<div class="text-white text-xs">
 						<CollapsableText title="Responsibilities" :items="responsibilities" />

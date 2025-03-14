@@ -22,7 +22,7 @@ const toggle = () => {
 
 		<Transition name="fade">
 			<ul v-show="isOpen" class="p-1 bg-slate-950 text-gray-300 transition-all space-y-1">
-				<li v-for="(item, index) in items" :key="index" class="text-sm">· {{ item }}</li>
+				<li v-for="(item, index) in items" :key="index" class="text-xs">· {{ item }}</li>
 			</ul>
 		</Transition>
 	</div>
