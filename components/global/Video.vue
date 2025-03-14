@@ -3,7 +3,6 @@ import { ref } from 'vue'
 
 defineProps({
 	src: String,
-	image: Object,
 	type: { type: String, default: 'video/mp4' },
 })
 
@@ -21,13 +20,20 @@ const handleWaiting = () => {
 
 <template>
 	<div class="video-container">
-		<div v-if="isLoading" class="loader h-24 w-24">
-			<Loader />
-		</div>
+		<div v-if="isLoading" class="loader">Cargando...</div>
 
-		<video ref="videoRef" autoplay muted loop playsinline class="video" @loadeddata="false" @waiting="false">
+		<video
+			ref="videoRef"
+			autoplay
+			muted
+			loop
+			playsinline
+			class="video"
+			@loadeddata="handleLoadedData"
+			@waiting="handleWaiting"
+		>
 			<source :src="src" :type="type" />
-			Your browser not support this video.
+			Tu navegador no soporta el video.
 		</video>
 	</div>
 </template>
@@ -51,8 +57,12 @@ const handleWaiting = () => {
 
 .loader {
 	position: absolute;
-	top: 30%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	background: rgba(0, 0, 0, 0.7);
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
 }
 </style>

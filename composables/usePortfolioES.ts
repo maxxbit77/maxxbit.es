@@ -58,8 +58,6 @@ export const usePortfolioES = () => {
 			more: 'Mostrar más >>',
 			less: '<< Mostrar menos',
 		},
-		responsabilities: 'Responsabilidades',
-		tech: 'Tecnologías',
 		list: [
 			{
 				projectName: 'BeKultura',
@@ -107,10 +105,6 @@ export const usePortfolioES = () => {
 				],
 				url: 'https://squinbox.com/',
 				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'FormKit', 'Prisma', 'Pinia'],
-				image: {
-					url: '/images/experience/mockup-sq.webp',
-					alt: 'mockup Squinbox',
-				},
 				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275596/squinbox_ruhxzv.mp4',
 			},
 			{
@@ -122,14 +116,13 @@ export const usePortfolioES = () => {
 				description:
 					'Asistente de lanzamiento de startups que agiliza el proceso de creación y despliegue de nuevos negocios. Proporciona herramientas para integraciones de características, gestión de proyectos y despliegue automatizado de sitios web para acelerar la estrategia de salida al mercado.',
 				responsibilities: [
-					'Desarrollo de un boilerplate basado en Vue 3 y Nuxt.',
-					'Diseño una configuración fácil para no desarrolladores.',
-					'Mejoras constantes en la escalabilidad y mantenibilidad.',
-					'Integraciónes de múltiples funcionalidades y librerías.',
+					'Desarrollé un boilerplate basado en Vue 3 y Nuxt.',
+					'Diseñé una configuración fácil para no desarrolladores.',
+					'Mejoré la escalabilidad y mantenibilidad.',
+					'Integración de múltiples funcionalidades.',
 				],
 				url: 'https://rapidlaunch.it/',
 				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'Radix', 'Shadcn', 'Vitest'],
-				image: { url: '/images/experience/mockup-rl.webp', alt: 'mockup RapidLaunch' },
 				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275508/rapid-launch_ydnzab.mp4',
 			},
 			{
@@ -141,9 +134,10 @@ export const usePortfolioES = () => {
 				description:
 					'Un juego de cartas coleccionables digitales basado en jugadores de fútbol reales. Los usuarios pueden coleccionar, intercambiar y competir con sus cartas de jugadores NFT, con estadísticas dinámicas que se actualizan en función del rendimiento real en los partidos.',
 				responsibilities: [
-					'Desarrolo de estructura y el diseño del sitio web.',
-					'Diseños de cartas y animaciónes',
-					'Desarrollo de plataforma de creación con arrastrar y soltar.',
+					'Diseñé la estructura y el diseño del sitio web.',
+					'Implementé un diseño responsive.',
+					'Optimizé la velocidad y el rendimiento del sitio web.',
+					'Desarrollé una plataforma de creación con arrastrar y soltar.',
 					'Sistema de usuarios con billeteras Web3.',
 				],
 				url: 'https://twitter.com/nfutcards',
@@ -159,13 +153,12 @@ export const usePortfolioES = () => {
 				description:
 					'Una plataforma comunitaria que conecta fundadores de startups con early adopters. Permite a los creadores validar sus ideas y recibir comentarios valiosos antes del lanzamiento, mientras que los usuarios pueden descubrir e influir en nuevas innovaciones desde sus primeras etapas.',
 				responsibilities: [
-					'Mejora en la interfaz de usuario de la plataforma.',
-					'Desarrollo de algoritmos para evaluar la viabilidad de ideas.',
-					'Optimización en el sistema para obtener información rápida.',
+					'Mejoré la interfaz de usuario de la plataforma.',
+					'Desarrollé algoritmos para evaluar la viabilidad de ideas.',
+					'Optimizé el sistema para obtener información rápida.',
 				],
 				url: 'https://horizonhub.io/',
 				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'axios', 'REST API'],
-				image: { url: '/images/experience/mockup-nfut.webp', alt: 'mockup NFUTCards' },
 				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275520/horizonhub_dfam9g.mp4',
 			},
 		],
