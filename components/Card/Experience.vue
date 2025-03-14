@@ -15,6 +15,9 @@ const props = defineProps({
 	tags: Array,
 	video: String,
 })
+
+const { locale } = useI18n()
+const lang = locale.value
 </script>
 
 <template>
@@ -44,12 +47,12 @@ const props = defineProps({
 				</div>
 
 				<!-- Este párrafo ocupa el espacio restante -->
-				<p class="text-gray-300 text-sm flex-1">
+				<p class="text-gray-300 text-sm">
 					{{ description }}
 				</p>
 
 				<!-- Último div pegado abajo -->
-				<div class="mt-auto">
+				<div class="flex-1">
 					<div class="text-white text-xs">
 						<CollapsableText title="Responsibilities" :items="responsibilities" />
 					</div>
