@@ -1,4 +1,5 @@
 <script setup>
+import { useI18n, useSwitchLocalePath } from '#i18n'
 const props = defineProps({
 	projectName: String,
 	image: {
