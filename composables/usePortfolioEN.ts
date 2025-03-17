@@ -124,7 +124,7 @@ export const usePortfolioEN = () => {
 			{
 				projectName: 'Rapid Launch',
 				companyName: 'Mosaiqo S.L.',
-				startAt: '2023',
+				startAt: '2022',
 				endsAt: '2023',
 				position: 'Front end Developer',
 				description:
@@ -145,8 +145,8 @@ export const usePortfolioEN = () => {
 			{
 				projectName: 'NFUT Cards',
 				companyName: 'Mosaiqo S.L.',
-				startAt: '2020',
-				endsAt: '2021',
+				startAt: '2021',
+				endsAt: '2022',
 				position: 'Front End Developer',
 				description:
 					'An NFT-based trading card game with Web3 integration. The game featured a unique deck of collectible cards backed by blockchain technology, allowing players to trade, buy, and sell cards securely. Implemented seamless Web3 wallet connections for authentication and transactions, ensuring a smooth user experience within the crypto ecosystem.',

@@ -35,7 +35,7 @@ const carousel = ref(null)
 .animate-marquee {
 	display: flex;
 	width: 100%;
-	animation: marquee 30s linear infinite;
+	animation: marquee 20s linear infinite;
 }
 
 .fade-mask {

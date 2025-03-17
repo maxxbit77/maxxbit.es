@@ -1,16 +1,16 @@
 <script setup>
-// useSeoMeta({
-// 	title: "Maxxbit's Porfolio",
-// 	description: 'Portfolio developed with Vue/Nuxt/Tailwind',
-// 	ogTitle: 'Maxxbit.tech',
-// 	ogDescription: 'Portfolio developed with Vue/Nuxt/Tailwind',
-// 	ogImage: '/brand/meta.png',
-// 	ogUrl: 'https://maxxbit.tech',
-// 	twitterTitle: 'Maxxbit.tech',
-// 	twitterDescription: 'Portfolio developed with Vue/Nuxt/Tailwind',
-// 	twitterImage: '/brand/meta.png',
-// 	twitterCard: 'Portfolio developed with Vue/Nuxt/Tailwind',
-// })
+useSeoMeta({
+	title: "Maxxbit's Porfolio",
+	description: 'Portfolio developed with Vue/Nuxt/Tailwind',
+	ogTitle: 'Maxxbit.tech',
+	ogDescription: 'Portfolio developed with Vue/Nuxt/Tailwind',
+	ogImage: '/brand/meta.png',
+	ogUrl: 'https://maxxbit.tech',
+	twitterTitle: 'Maxxbit.tech',
+	twitterDescription: 'Portfolio developed with Vue/Nuxt/Tailwind',
+	twitterImage: '/brand/meta.png',
+	twitterCard: 'Portfolio developed with Vue/Nuxt/Tailwind',
+})
 
 const locale = useCookie('locale')
 
@@ -40,7 +40,7 @@ const stackData = computed(() => portfolioInfo.value.stack)
 		<section class="mt-24" id="stack">
 			<TechStack :data="stackData" />
 		</section>
-		<section class="mt-24" id="studies">
+		<section class="mt-36" id="studies">
 			<Courses :data="coursesData" />
 		</section>
 	</div>

@@ -33,34 +33,19 @@ onMounted(() => {
 
 <template>
 	<div class="flex flex-col space-y-8 relative">
-		<button
-			class="text-xs cursor-pointer absolute left-0 md:left-20 -top-10 sm:-top-11 z-10 border rounded-lg transition-all hover:bg-gray-500"
+		<div
 			@click="toggleShowAll"
-			:class="{ 'bg-accent text-white': showAll }"
+			class="text-sm text-accent font-matrix mr-8 absolute top-10 right-0 cursor-pointer flex justify-center items-center space-x-2"
 		>
-			<div class="relative w-14 h-14">
-				<Transition name="flip">
-					<Icon
-						v-if="!showAll"
-						name="material-symbols:multimodal-hand-eye"
-						key="show"
-						class="size-14 p-2 border-white text-accent absolute inset-0"
-					/>
-				</Transition>
-
-				<Transition name="flip">
-					<Icon
-						v-if="showAll"
-						key="hide"
-						name="material-symbols:disabled-visible-rounded"
-						class="size-14 p-2 text-white absolute inset-0"
-					/>
-				</Transition>
-			</div>
-		</button>
-
+			<p>Show All</p>
+			<Icon
+				name="material-symbols:arrow-forward-ios"
+				class="size-3 transition-all"
+				:class="{ 'rotate-90': showAll, 'rotate-0': !showAll }"
+			/>
+		</div>
 		<div v-for="(icons, category) in categoriesIconsFilteredByQuantity" :key="category">
-			<div class="flex justify-between space-x-1 items-center">
+			<div class="flex justify-between items-center">
 				<h3 class="text-xl font-bold text-white mb-2">{{ category }}</h3>
 			</div>
 			<div class="w-full">
