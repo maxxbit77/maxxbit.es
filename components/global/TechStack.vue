@@ -36,6 +36,9 @@ import {
 	LogosVuetify,
 	LogosWordpress,
 	LogosAsana,
+	LogosJest,
+	LogosCypress,
+	LogosVitest,
 } from '#components'
 
 const smallIcons = [
@@ -46,12 +49,13 @@ const smallIcons = [
 ]
 
 const mediumIcons = [
-	{ name: 'Tailwind', component: LogosTailwind, skill: 95 },
-	{ name: 'Vite', component: LogosVite, skill: 70 },
-	{ name: 'API', component: LogosApi, skill: 70 },
-	{ name: 'CSS', component: LogosCss, skill: 80 },
+	{ name: 'Tailwind CSS', component: LogosTailwind, skill: 90 },
+	{ name: 'Jest.js', component: LogosJest, skill: 75 },
+	{ name: 'Vite', component: LogosVite, skill: 60 },
+	{ name: 'API Restful', component: LogosApi, skill: 70 },
+	{ name: 'CSS 3', component: LogosCss, skill: 80 },
 	{ name: 'Git', component: LogosGit, skill: 70 },
-	{ name: 'HTML', component: LogosHtml, skill: 99 },
+	{ name: 'HTML 5', component: LogosHtml, skill: 99 },
 	{ name: 'ShadCN', component: LogosShadcn, skill: 70 },
 	{ name: 'Radix UI', component: LogosRadix, skill: 70 },
 	{ name: 'JSON', component: LogosJson, skill: 70 },
@@ -61,6 +65,8 @@ const mediumIcons = [
 
 const largeIcons = [
 	{ name: 'Postman', component: LogosPostman, skill: 60 },
+	{ name: 'Vitest', component: LogosVitest, skill: 60 },
+	{ name: 'Cypress', component: LogosCypress, skill: 50 },
 	{ name: 'Supabase', component: LogosSupabase, skill: 50 },
 	{ name: 'Node.js', component: LogosNode, skill: 50 },
 	{ name: 'Notion', component: LogosNotion, skill: 80 },
@@ -91,7 +97,8 @@ const categories = {
 		'D3.js',
 		'WordPress',
 	],
-	'Design & UI/UX': ['Tailwind', 'CSS', 'Radix UI', 'ShadCN', 'Vuetify', 'Bootstrap', 'SVG'],
+	'Design & UI/UX': ['Tailwind', 'CSS 3', 'Radix UI', 'ShadCN', 'Vuetify', 'Bootstrap', 'SVG'],
+	Testing: ['Jest.js', 'Vitest', 'Cypress'],
 	'Tools & DevOps': ['Git', 'GitHub', 'NPM', 'Vite', 'Docker', 'Sourcetree', 'Markdown', 'Leaflet'],
 	'Backend & Databases': ['Firebase', 'Supabase', 'Postman'],
 	'Productivity & Management': ['Notion', 'Jira', 'Confluence', 'Asana'],

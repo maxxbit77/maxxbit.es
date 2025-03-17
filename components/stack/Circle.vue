@@ -1,6 +1,5 @@
 import type { mergeProps } from 'vue';
 <script setup>
-import { ProgressIndicator, ProgressRoot } from 'radix-vue'
 const props = defineProps({
 	smallIcons: Array,
 	mediumIcons: Array,
@@ -57,7 +56,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 			</div>
 		</div>
 		<div>
-			<div class="absolute top-[-25%] left-1/2 -translate-x-[65%] z-0">
+			<div class="absolute top-[-26%] left-1/2 -translate-x-[65%] z-0">
 				<BgBlue />
 			</div>
 			<div class="absolute top-[4%] left-1/2 -translate-x-[65%] z-0">
