@@ -110,7 +110,7 @@ export const usePortfolioES = () => {
 			{
 				projectName: 'Rapid Launch',
 				companyName: 'Mosaiqo S.L.',
-				startAt: '2023',
+				startAt: '2022',
 				endsAt: '2023',
 				position: 'Desarrollador Front-end',
 				description:
@@ -131,8 +131,8 @@ export const usePortfolioES = () => {
 			{
 				projectName: 'NFUT Cards',
 				companyName: 'Mosaiqo S.L.',
-				startAt: '2020',
-				endsAt: '2021',
+				startAt: '2021',
+				endsAt: '2022',
 				position: 'Desarrollador Frontend',
 				description:
 					'Un juego de cartas coleccionables basado en NFT con integración Web3. El juego presentaba un mazo único de cartas coleccionables respaldadas por tecnología blockchain, permitiendo a los jugadores intercambiar, comprar y vender cartas de forma segura. Se implementaron conexiones fluidas con monederos Web3 para autenticación y transacciones, asegurando una experiencia de usuario sin fricciones dentro del ecosistema cripto.',

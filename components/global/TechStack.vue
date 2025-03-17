@@ -52,21 +52,22 @@ const mediumIcons = [
 	{ name: 'CSS', component: LogosCss, skill: 80 },
 	{ name: 'Git', component: LogosGit, skill: 70 },
 	{ name: 'HTML', component: LogosHtml, skill: 99 },
-	{ name: 'Node.js', component: LogosNode, skill: 50 },
-	{ name: 'Postman', component: LogosPostman, skill: 60 },
 	{ name: 'ShadCN', component: LogosShadcn, skill: 70 },
-	{ name: 'Supabase', component: LogosSupabase, skill: 50 },
 	{ name: 'Radix UI', component: LogosRadix, skill: 70 },
+	{ name: 'JSON', component: LogosJson, skill: 70 },
+	{ name: 'Vuetify', component: LogosVuetify, skill: 70 },
+	{ name: 'NPM', component: LogosNpm, skill: 60 },
 ]
 
 const largeIcons = [
+	{ name: 'Postman', component: LogosPostman, skill: 60 },
+	{ name: 'Supabase', component: LogosSupabase, skill: 50 },
+	{ name: 'Node.js', component: LogosNode, skill: 50 },
 	{ name: 'Notion', component: LogosNotion, skill: 80 },
 	{ name: 'Asana', component: LogosAsana, skill: 70 },
 	{ name: 'Jira', component: LogosJira, skill: 60 },
-	{ name: 'NPM', component: LogosNpm, skill: 60 },
 	{ name: 'Bootstrap', component: LogosBootstrap, skill: 90 },
 	{ name: 'GitHub', component: LogosGithub, skill: 70 },
-	{ name: 'JSON', component: LogosJson, skill: 70 },
 	{ name: 'WordPress', component: LogosWordpress, skill: 80 },
 	{ name: 'Confluence', component: LogosConfluence, skill: 50 },
 	{ name: 'Docker', component: LogosDocker, skill: 40 },
@@ -76,7 +77,6 @@ const largeIcons = [
 	{ name: 'Markdown', component: LogosMarkdown, skill: 70 },
 	{ name: 'Sourcetree', component: LogosSourcetree, skill: 70 },
 	{ name: 'SVG', component: LogosSvg, skill: 70 },
-	{ name: 'Vuetify', component: LogosVuetify, skill: 70 },
 ]
 
 const categories = {
@@ -124,30 +124,17 @@ onMounted(() => {
 
 <template>
 	<div class="relative">
-		<!-- blur effets -->
-		<div
-			class="absolute -bottom-[400px] right-0 z-0 w-[300px] h-[300px] bg-gradient-to-r from-matrix to-transparent blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"
-		/>
-		<div
-			class="absolute top-[500px] right-24 z-0 w-[200px] h-[200px] bg-gradient-to-r from-matrix-dark to-transparent blur-3xl opacity-30 transform translate-x-1/2 -translate-y-1/2"
-		/>
-		<div
-			class="absolute top-0 -left-24 z-0 w-[200px] h-[200px] bg-gradient-to-r from-accent to-transparent blur-3xl opacity-30 transform"
-		/>
-
-		<TitleLine>{{ data.title }}</TitleLine>
+		<div class="mb-12">
+			<TitleLine>{{ data.title }}</TitleLine>
+		</div>
 
 		<button
 			v-if="showChangeButton"
 			@click="handleButtonClick"
-			class="p-2 border border-white text-accent rounded-lg absolute top-10 left-0 shadow-accent group transition-all hover:bg-gray-500"
+			class="p-2 border border-white text-accent rounded-lg absolute top-10 left-0 shadow-accent group transition-all hover:bg-gray-500 z-50"
 			:class="{ 'bg-accent text-white': !showCircleComponent }"
 		>
-			<Icon
-				name="material-symbols:change-circle-outline"
-				class="size-10 group-hover:text-white icon-rotate"
-				:style="{ transform: `rotate(${iconRotation}deg)` }"
-			/>
+			{{ data.title === 'the tech self' ? 'Cambiar vista' : 'Change view' }}
 		</button>
 
 		<Transition name="blur" mode="out-in">
