@@ -1,10 +1,11 @@
 <script setup>
 const props = defineProps({
-	data: Object,
+	translations: Object,
+	icons: Object,
 	skillTxt: String,
 })
 
-let categories = { ...props.data }
+let categories = { ...props.icons }
 const iconsQuantityToShow = ref(6)
 const showAll = ref(false)
 
@@ -12,7 +13,7 @@ const categoriesIconsFilteredByQuantity = computed(() => {
 	if (showAll.value) {
 		return categories
 	} else {
-		categories = { ...props.data }
+		categories = { ...props.icons }
 		return Object.fromEntries(
 			Object.entries(categories).map(([category, icons]) => [category, icons.slice(0, iconsQuantityToShow.value)])
 		)
@@ -22,7 +23,7 @@ const categoriesIconsFilteredByQuantity = computed(() => {
 const toggleShowAll = () => {
 	showAll.value = !showAll.value
 	if (!showAll.value) {
-		categories.value = { ...props.data }
+		categories.value = { ...props.icons }
 	}
 }
 
@@ -37,7 +38,7 @@ onMounted(() => {
 			@click="toggleShowAll"
 			class="text-sm text-accent font-matrix mr-8 absolute top-10 right-0 cursor-pointer flex justify-center items-center space-x-2"
 		>
-			<p>Show All</p>
+			<p>{{ !showAll ? translations.showMore : translations.showLess }}</p>
 			<Icon
 				name="material-symbols:arrow-forward-ios"
 				class="size-3 transition-all"
