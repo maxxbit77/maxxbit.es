@@ -4,21 +4,12 @@ export const usePortfolioEN = () => {
 			{ text: 'Experience', url: '/#experience' },
 			{ text: 'Projects', url: '/#projects' },
 			{ text: 'Stack', url: '/#stack' },
-			{ text: 'Studies', url: '/#studies' },
+			{ text: 'Studies', url: '/#courses' },
 		],
 		logo: '/brand/logo-vertical.png',
 		userLogo: '/brand/only-logo-nobg.png',
 	}
-	const footer = {
-		items: [
-			{ text: 'About', url: '/' },
-			{ text: 'Experience', url: '/#experience' },
-			{ text: 'Projects', url: '/#projects' },
-			{ text: 'Studies', url: '/#studies' },
-		],
-		logo: '/brand/logo-vertical.png',
-		userLogo: '/brand/only-logo-nobg.png',
-	}
+	const footer = {}
 	const myInfo = {
 		nickName: '@maxxbit',
 		name: 'Maxi Roig',
@@ -231,6 +222,11 @@ export const usePortfolioEN = () => {
 	const stack = {
 		title: 'The tech shelf 📚',
 		skill: 'Skill',
+		buttons: {
+			changeView: 'Change view',
+			showMore: 'Show More',
+			showLess: 'Show Less',
+		},
 	}
 	const courses = {
 		title: 'LEVEL UP ACADEMY 🏆',

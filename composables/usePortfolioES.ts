@@ -225,6 +225,11 @@ export const usePortfolioES = () => {
 	const stack = {
 		title: 'La Estantería Tech 📚',
 		skill: 'Nivel',
+		buttons: {
+			changeView: 'Cambiar Vista',
+			showMore: 'Mostar más',
+			showLess: 'Mostrar menos',
+		},
 	}
 
 	const courses = {

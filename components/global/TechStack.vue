@@ -134,7 +134,7 @@ onMounted(() => {
 			class="p-2 border border-white text-accent rounded-lg absolute top-10 left-0 shadow-accent group transition-all hover:bg-gray-500 z-50"
 			:class="{ 'bg-accent text-white': !showCircleComponent }"
 		>
-			{{ data.title === 'the tech self' ? 'Cambiar vista' : 'Change view' }}
+			{{ data.buttons.changeView }}
 		</button>
 
 		<Transition name="blur" mode="out-in">
@@ -147,7 +147,12 @@ onMounted(() => {
 				/>
 			</div>
 			<div v-else key="list">
-				<StackList class="mt-12" :data="categorizedIcons" :skillTxt="data.skill" />
+				<StackList
+					class="mt-12"
+					:icons="categorizedIcons"
+					:skillTxt="data.skill"
+					:translations="data.buttons"
+				/>
 			</div>
 		</Transition>
 	</div>
