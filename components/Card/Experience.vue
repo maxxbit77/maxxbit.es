@@ -29,10 +29,16 @@ const lang = locale.value
 			<span class="text-gray-500 flex justify-end text-sm font-matrix"> {{ startAt }} - {{ endsAt }} </span>
 			<div class="relative z-10 h-44">
 				<a :href="url" target="_blank">
-					<img v-if="image" loading="lazy" :src="image.url" class="h-full rounded-lg" :alt="image.alt" />
-					<div v-else>
+					<div v-if="video">
 						<Video :src="video" class="rounded-lg" />
 					</div>
+					<img
+						v-else
+						loading="lazy"
+						:src="image.url"
+						class="w-full h-44 rounded-lg object-cover"
+						:alt="image.alt"
+					/>
 				</a>
 			</div>
 

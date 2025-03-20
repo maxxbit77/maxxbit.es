@@ -25,7 +25,7 @@ const stackData = computed(() => portfolioInfo.value.stack)
 </script>
 
 <template>
-	<div class="max-w-3xl mx-auto px-4 bg-slate-950 overflow-x-hidden">
+	<div class="max-w-3xl mx-auto px-4 bg-slate-950">
 		<NavBar :data="navBarData" />
 		<Header :data="presentationData" />
 		<div>
