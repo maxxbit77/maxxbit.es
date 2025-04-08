@@ -21,7 +21,8 @@ export const usePortfolioES = () => {
 			firstParagraphhighlighted: '',
 			secondParagraph: '',
 			secondParagraphhighlighted: 'Conecto el diseño y la ingeniería',
-			thirdParagraph: ', asegurando que tu producto reciba la atención al detalle que necesita para',
+			thirdParagraph:
+				', asegurando que tu producto reciba la atención al detalle que necesita para',
 			thirdParagraphhighlighted: 'destacarse entre la competencia. 🚀',
 		},
 
@@ -78,12 +79,23 @@ export const usePortfolioES = () => {
 					'Implementé TypeScript para mejorar la mantenibilidad del código y reducir errores.',
 				],
 				url: 'https://beonworldwide.com/es',
-				tags: ['JS(ES6)', 'TypeScript', 'Vue 3', 'Nuxt 3', 'Tailwind 3', 'Vitest', 'Git', 'D3.js', 'REST API'],
+				tags: [
+					'JS(ES6)',
+					'TypeScript',
+					'Vue 3',
+					'Nuxt 3',
+					'Tailwind 3',
+					'Vitest',
+					'Git',
+					'D3.js',
+					'REST API',
+				],
 				image: {
 					url: '/images/experience/mockup-beonWW.webp',
 					alt: 'mockup Venta de Entradas',
 				},
-				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275588/beon_kps6qr.mp4',
+				video:
+					'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275588/beon_kps6qr.mp4',
 			},
 			{
 				projectName: 'Squinbox',
@@ -104,8 +116,18 @@ export const usePortfolioES = () => {
 					'Realicé pruebas unitarias e integradas.',
 				],
 				url: 'https://squinbox.com/',
-				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'FormKit', 'Prisma', 'Pinia'],
-				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275596/squinbox_ruhxzv.mp4',
+				tags: [
+					'JS(ES6)',
+					'Vue 3',
+					'Nuxt 3',
+					'TypeScript',
+					'Tailwind',
+					'FormKit',
+					'Prisma',
+					'Pinia',
+				],
+				video:
+					'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275596/squinbox_ruhxzv.mp4',
 			},
 			{
 				projectName: 'Rapid Launch',
@@ -125,8 +147,19 @@ export const usePortfolioES = () => {
 				],
 
 				url: 'https://mosaiqo.com/',
-				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'Radix', 'Shadcn', 'Vitest'],
-				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275508/rapid-launch_ydnzab.mp4',
+				tags: [
+					'JS(ES6)',
+					'Vue 3',
+					'Nuxt 3',
+					'TypeScript',
+					'Tailwind',
+					'Pinia',
+					'Radix',
+					'Shadcn',
+					'Vitest',
+				],
+				video:
+					'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275508/rapid-launch_ydnzab.mp4',
 			},
 			{
 				projectName: 'NFUT Cards',
@@ -147,7 +180,8 @@ export const usePortfolioES = () => {
 				url: 'https://twitter.com/nfutcards',
 				tags: ['HTML5', 'Css3', 'Vue 3', 'Nuxt 3', 'Web sockets', 'Web 3', 'UI/UX'],
 				image: { url: '/images/experience/mockup-nfut.webp', alt: 'mockup NFUTCards' },
-				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275664/nfut_w6ijfd.mp4',
+				video:
+					'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275664/nfut_w6ijfd.mp4',
 			},
 
 			{
@@ -164,8 +198,18 @@ export const usePortfolioES = () => {
 					'Optimizé el sistema para obtener información rápida.',
 				],
 				url: 'https://horizonhub.io/',
-				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'axios', 'REST API'],
-				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275520/horizonhub_dfam9g.mp4',
+				tags: [
+					'JS(ES6)',
+					'Vue 3',
+					'Nuxt 3',
+					'TypeScript',
+					'Tailwind',
+					'Pinia',
+					'axios',
+					'REST API',
+				],
+				video:
+					'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275520/horizonhub_dfam9g.mp4',
 			},
 		],
 	}
@@ -181,7 +225,7 @@ export const usePortfolioES = () => {
 				endsAt: 'Actualidad',
 				position: '',
 				description:
-					'Aplicación de gestión financiera que ayuda a los usuarios a rastrear sus cuentas bancarias, efectivo, inversiones y criptomonedas. Proporcionará una visión clara del estado financiero con gráficos interactivos y datos de mercado en tiempo real.',
+					'Aplicación de capacitación para integraciones con Web3 y contratos inteligentes. Una app de gestión financiera que ayuda a los usuarios a llevar un control de sus cuentas bancarias, efectivo, inversiones y criptomonedas. Proporciona una visión clara del estado financiero mediante gráficos interactivos y datos de mercado en tiempo real.',
 				url: 'https://github.com/maxxbit77/finance-manager',
 				tags: [
 					'Bitcoin',
@@ -205,7 +249,7 @@ export const usePortfolioES = () => {
 				startAt: '2024',
 				endsAt: 'Actualidad',
 				description:
-					'Aplicación donde los usuarios comparten su estado de ánimo en un mapa utilizando emotes. Publica tus sentimientos, explora emociones globales en tiempo real y conéctate a través de una experiencia emocional compartida.',
+					'Aplicación de capacitación para DDD y arquitectura hexagonal. En esta app, los usuarios podrán compartir su estado de ánimo en un mapa mediante emotes, explorar emociones globales en tiempo real y conectar a través de una experiencia emocional compartida.',
 				technologies: ['Vue.js', 'Vuex', 'REST API', 'SCSS'],
 				url: 'https://github.com/maxxbit77/Vibency-frontend-clone',
 				tags: [
@@ -244,7 +288,15 @@ export const usePortfolioES = () => {
 				image: { url: '/images/studies/react.webp', alt: 'React' },
 				status: 'En progreso',
 				url: 'https://www.udemy.com/course/nodejs-the-complete-guide/',
-				tags: ['Redux', 'Peticiones', 'Enrutamiento', 'Renderizado', 'Hooks', 'Testing', 'Autenticación'],
+				tags: [
+					'Redux',
+					'Peticiones',
+					'Enrutamiento',
+					'Renderizado',
+					'Hooks',
+					'Testing',
+					'Autenticación',
+				],
 			},
 			{
 				courseName: 'NodeJS',
@@ -255,7 +307,15 @@ export const usePortfolioES = () => {
 				image: { url: '/images/studies/node.jpg', alt: 'Node JS' },
 				status: 'En progreso',
 				url: 'https://www.udemy.com/course/nodejs-the-complete-guide/',
-				tags: ['Módulos', 'Peticiones', 'Respuestas', 'Renderizado', 'Express.js', 'Cookies', 'Autenticación'],
+				tags: [
+					'Módulos',
+					'Peticiones',
+					'Respuestas',
+					'Renderizado',
+					'Express.js',
+					'Cookies',
+					'Autenticación',
+				],
 			},
 			{
 				courseName: 'TypeScript',
@@ -266,7 +326,15 @@ export const usePortfolioES = () => {
 				image: { url: '/images/studies/typescript.jpg', alt: 'TypeScript' },
 				status: 'Completado',
 				url: 'https://www.udemy.com/course/understanding-typescript/',
-				tags: ['Tipos', 'Clases', 'Interfaces', 'Decoradores', 'Namespaces', 'webpack', 'Flujo de trabajo'],
+				tags: [
+					'Tipos',
+					'Clases',
+					'Interfaces',
+					'Decoradores',
+					'Namespaces',
+					'webpack',
+					'Flujo de trabajo',
+				],
 			},
 			{
 				courseName: 'Nuxt 3 ',
@@ -277,7 +345,15 @@ export const usePortfolioES = () => {
 				image: { url: '/images/studies/nuxt.jpg', alt: 'Nuxt' },
 				status: 'Completado',
 				url: 'https://www.udemy.com/course/the-nuxt-3-bootcamp-the-complete-developer-guide/',
-				tags: ['Peticiones HTTP', 'CSR', 'Layouts', 'useAsyncData', 'Autenticación', 'Supabase', 'useFetch'],
+				tags: [
+					'Peticiones HTTP',
+					'CSR',
+					'Layouts',
+					'useAsyncData',
+					'Autenticación',
+					'Supabase',
+					'useFetch',
+				],
 			},
 			{
 				courseName: 'Vue 3',
