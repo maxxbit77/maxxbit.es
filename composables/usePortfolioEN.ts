@@ -128,7 +128,7 @@ export const usePortfolioEN = () => {
 					'Designed a modular system to enable easy addition or removal of components.',
 					'Documented the project for user-friendly setup and customization.',
 				],
-				url: 'https://rapidlaunch.it/',
+				url: 'https://mosaiqo.com/',
 				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'Radix', 'Shadcn', 'Vitest'],
 				image: { url: '/images/experience/mockup-rl.webp', alt: 'mockup RapidLaunch' },
 				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275508/rapid-launch_ydnzab.mp4',
@@ -223,7 +223,7 @@ export const usePortfolioEN = () => {
 		title: 'The tech shelf 📚',
 		skill: 'Skill',
 		buttons: {
-			changeView: 'Change view',
+			changeView: 'Sort by Categories',
 			showMore: 'Show More',
 			showLess: 'Show Less',
 		},

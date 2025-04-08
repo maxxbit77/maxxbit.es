@@ -41,20 +41,6 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 <template>
 	<div class="relative">
 		<!-- Circles Background -->
-		<div class="absolute -top-12 right-0 text-white text-sm">
-			<div class="flex justify-start items-center space-x-2">
-				<div class="size-4 rounded-full bg-green-400"></div>
-				<p>High</p>
-			</div>
-			<div class="flex justify-start items-center space-x-2">
-				<div class="size-4 rounded-full bg-orange-400"></div>
-				<p>Advanced</p>
-			</div>
-			<div class="flex justify-start items-center space-x-2">
-				<div class="size-4 rounded-full bg-blue-400"></div>
-				<p>Intermediate</p>
-			</div>
-		</div>
 		<div>
 			<div class="absolute top-[-26%] left-1/2 -translate-x-[65%] z-0">
 				<BgBlue />
