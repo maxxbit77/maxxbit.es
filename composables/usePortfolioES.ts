@@ -124,7 +124,7 @@ export const usePortfolioES = () => {
 					'Documenté el proyecto para una configuración y personalización amigable para el usuario.',
 				],
 
-				url: 'https://rapidlaunch.it/',
+				url: 'https://mosaiqo.com/',
 				tags: ['JS(ES6)', 'Vue 3', 'Nuxt 3', 'TypeScript', 'Tailwind', 'Pinia', 'Radix', 'Shadcn', 'Vitest'],
 				video: 'https://res.cloudinary.com/dw6ikrcqm/video/upload/v1740275508/rapid-launch_ydnzab.mp4',
 			},
@@ -226,7 +226,7 @@ export const usePortfolioES = () => {
 		title: 'La Estantería Tech 📚',
 		skill: 'Nivel',
 		buttons: {
-			changeView: 'Cambiar Vista',
+			changeView: 'Ordenar por tecnologías',
 			showMore: 'Mostar más',
 			showLess: 'Mostrar menos',
 		},

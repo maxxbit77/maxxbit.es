@@ -1,8 +1,9 @@
 <script setup>
+import { useWindowSize } from '@vueuse/core'
+
 const props = defineProps({
 	data: Object,
 })
-
 import {
 	LogosBootstrap,
 	LogosJs,
@@ -41,11 +42,13 @@ import {
 	LogosVitest,
 } from '#components'
 
+const { width: screenSize } = useWindowSize()
+
 const smallIcons = [
 	{ name: 'Javascript', component: LogosJs, skill: 90 },
-	{ name: 'Nuxt.js 3', component: LogosNuxt, skill: 95 },
-	{ name: 'TypeScript', component: LogosTs, skill: 85 },
-	{ name: 'Vue.js 3', component: LogosVue, skill: 95 },
+	{ name: 'Nuxt.js 3', component: LogosNuxt, skill: 90 },
+	{ name: 'TypeScript', component: LogosTs, skill: 80 },
+	{ name: 'Vue.js 3', component: LogosVue, skill: 90 },
 ]
 
 const mediumIcons = [
@@ -53,9 +56,9 @@ const mediumIcons = [
 	{ name: 'Jest.js', component: LogosJest, skill: 75 },
 	{ name: 'Vite', component: LogosVite, skill: 60 },
 	{ name: 'API Restful', component: LogosApi, skill: 70 },
-	{ name: 'CSS 3', component: LogosCss, skill: 80 },
+	{ name: 'CSS 3', component: LogosCss, skill: 90 },
 	{ name: 'Git', component: LogosGit, skill: 70 },
-	{ name: 'HTML 5', component: LogosHtml, skill: 99 },
+	{ name: 'HTML 5', component: LogosHtml, skill: 90 },
 	{ name: 'ShadCN', component: LogosShadcn, skill: 70 },
 	{ name: 'Radix UI', component: LogosRadix, skill: 70 },
 	{ name: 'JSON', component: LogosJson, skill: 70 },
@@ -97,7 +100,7 @@ const categories = {
 		'D3.js',
 		'WordPress',
 	],
-	'Design & UI/UX': ['Tailwind', 'CSS 3', 'Radix UI', 'ShadCN', 'Vuetify', 'Bootstrap', 'SVG'],
+	'Design & UI/UX': ['Tailwind CSS', 'CSS 3', 'Radix UI', 'ShadCN', 'Vuetify', 'Bootstrap', 'SVG'],
 	Testing: ['Jest.js', 'Vitest', 'Cypress'],
 	'Tools & DevOps': ['Git', 'GitHub', 'NPM', 'Vite', 'Docker', 'Sourcetree', 'Markdown', 'Leaflet'],
 	'Backend & Databases': ['Firebase', 'Supabase', 'Postman'],
@@ -119,12 +122,15 @@ const handleButtonClick = () => {
 	iconRotation.value += 180
 }
 
+watch(screenSize, (newWidth) => {
+	showChangeButton.value = newWidth >= 800
+	showCircleComponent.value = newWidth >= 800
+})
+
 onMounted(() => {
-	if (window.innerWidth < 800) {
-		showChangeButton.value = false
-	} else {
-		showCircleComponent.value = true
-		showChangeButton.value = true
+	if (process.client) {
+		showChangeButton.value = screenSize.value >= 800
+		showCircleComponent.value = screenSize.value >= 800
 	}
 })
 </script>
@@ -143,6 +149,20 @@ onMounted(() => {
 		>
 			{{ data.buttons.changeView }}
 		</button>
+		<div class="absolute top-8 right-0 text-white text-sm">
+			<div class="flex justify-start items-center space-x-2">
+				<div class="size-4 rounded-full bg-matrix"></div>
+				<p>Advanced</p>
+			</div>
+			<div class="flex justify-start items-center space-x-2">
+				<div class="size-4 rounded-full bg-accent"></div>
+				<p>Intermediate</p>
+			</div>
+			<div class="flex justify-start items-center space-x-2">
+				<div class="size-4 rounded-full bg-blue-300"></div>
+				<p>Basic</p>
+			</div>
+		</div>
 
 		<Transition name="blur" mode="out-in">
 			<div v-if="showCircleComponent" key="circle">

@@ -9,15 +9,17 @@ let categories = { ...props.icons }
 const iconsQuantityToShow = ref(6)
 const showAll = ref(false)
 
-const categoriesIconsFilteredByQuantity = computed(() => {
-	if (showAll.value) {
-		return categories
-	} else {
-		categories = { ...props.icons }
-		return Object.fromEntries(
-			Object.entries(categories).map(([category, icons]) => [category, icons.slice(0, iconsQuantityToShow.value)])
-		)
-	}
+const filteredCategories = computed(() => {
+	const sortedCategories = Object.fromEntries(
+		Object.entries(props.icons).map(([category, icons]) => [
+			category,
+			[...icons]
+				.sort((a, b) => b.skill - a.skill)
+				.slice(0, showAll.value ? icons.length : iconsQuantityToShow.value),
+		])
+	)
+
+	return sortedCategories
 })
 
 const toggleShowAll = () => {
@@ -26,10 +28,6 @@ const toggleShowAll = () => {
 		categories.value = { ...props.icons }
 	}
 }
-
-onMounted(() => {
-	if (window.innerWidth < 800) iconsQuantityToShow.value = 3
-})
 </script>
 
 <template>
@@ -45,7 +43,7 @@ onMounted(() => {
 				:class="{ 'rotate-90': showAll, 'rotate-0': !showAll }"
 			/>
 		</div>
-		<div v-for="(icons, category) in categoriesIconsFilteredByQuantity" :key="category">
+		<div v-for="(icons, category) in filteredCategories" :key="category">
 			<div class="flex justify-between items-center">
 				<h3 class="text-xl font-bold text-white mb-2">{{ category }}</h3>
 			</div>
@@ -54,20 +52,24 @@ onMounted(() => {
 					<li
 						v-for="(icon, index) in icons"
 						:key="index"
-						class="w-28 p-2 bg-slate-800 rounded-lg grid grid-row h-32"
+						class="w-28 p-2 custom-blur rounded-lg grid grid-row h-32"
+						:class="{
+							'shadow-sm shadow-matrix': icon.skill >= 90,
+							'shadow-sm shadow-accent': icon.skill >= 60,
+							'shadow-sm shadow-blue-300': icon.skill < 60,
+						}"
 					>
-						<p class="text-matrix text-center font-matrix">{{ icon.name }}</p>
+						<p
+							class="text-center font-matrix"
+							:class="{
+								'text-matrix': icon.skill >= 90,
+								'text-accent': icon.skill >= 60,
+								'text-blue-300': icon.skill < 60,
+							}"
+						>
+							{{ icon.name }}
+						</p>
 						<component :is="icon.component" class="size-12 mx-auto" />
-						<div class="flex justify-between">
-							<span class="text-xs text-gray-400">{{ skillTxt }}</span>
-							<span class="text-xs text-gray-400">{{ icon.skill }}%</span>
-						</div>
-						<ProgressRoot :value="icon.skill" class="h-1 w-full bg-gray-700 rounded">
-							<ProgressIndicator
-								class="h-1 bg-matrix rounded transition-all duration-300"
-								:style="{ width: `${icon.skill}%` }"
-							/>
-						</ProgressRoot>
 					</li>
 				</ul>
 			</div>

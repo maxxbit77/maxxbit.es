@@ -28,9 +28,7 @@ const stackData = computed(() => portfolioInfo.value.stack)
 	<div class="max-w-3xl mx-auto px-4 bg-slate-950">
 		<NavBar :data="navBarData" />
 		<Header :data="presentationData" />
-		<div>
-			<MatrixEffect />
-		</div>
+
 		<section class="mt-24" id="experience">
 			<WorkExperiences :data="experienceData" />
 		</section>
