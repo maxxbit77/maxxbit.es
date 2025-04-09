@@ -1,8 +1,21 @@
 # Nuxt 3 Minimal Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to
+learn more.
 
 ## Setup
+
+##Tener instalado Node.js 18 o superior
+
+##Tener instalado npm
+
+## Clonar repositorio
+
+git clone git@github.com:maxxbit77/maxxbit.es.git
+
+## Entrar al directorio
+
+cd "cristian-repositorio"
 
 Make sure to install the dependencies:
 
@@ -10,14 +23,6 @@ Make sure to install the dependencies:
 # npm
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
@@ -28,14 +33,6 @@ Start the development server on `http://localhost:3000`:
 # npm
 npm run dev
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
@@ -72,4 +69,5 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment)
+for more information.
