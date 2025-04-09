@@ -16,8 +16,9 @@ import Cube from '~/components/animations/Cube.vue'
 				<Presentation :myInfo="data" />
 				<Socials :myInfo="data" />
 			</div>
-			<div class="fade-mask">
-				<img src="/public/profile-1.png" alt="profile-picture" />
+			<div class=" fade-mask">
+				<img class="hidden md:block w-full h-full object-cover"
+					src="/public/profile-1.png" alt="profile-picture" />
 			</div>
 		</header>
 	</div>
